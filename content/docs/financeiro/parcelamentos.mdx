@@ -1,0 +1,78 @@
+---
+title: Parcelamentos
+description: Gere uma série de parcelas a partir de um lançamento e emita o carnê de cobranças.
+keywords:
+  - parcela
+  - parcelamento
+  - carnê
+  - série
+  - dividir
+---
+
+Um lançamento pode virar uma série de parcelas. Cada parcela é um lançamento próprio, com vencimento
+e status independentes, mas todas continuam ligadas pela série.
+
+<Permissoes>
+Área **Financial entries** — "Permite gerar uma série de parcelas a partir de um lançamento
+financeiro".
+
+</Permissoes>
+
+## Passo a passo
+
+<Steps>
+
+<Step>
+Abra **Novo lançamento** e preencha os dados normalmente.
+
+</Step>
+
+<Step>
+Marque **Parcelar este lançamento**.
+
+</Step>
+
+<Step>
+Informe o **Total de parcelas** — precisa ser maior que 1.
+
+</Step>
+
+<Step>
+Salve.
+
+</Step>
+
+</Steps>
+
+<Resultado>
+O sistema cria uma parcela para cada período, com os vencimentos distribuídos. A primeira parcela é a
+"cabeça" da série; as demais ficam vinculadas a ela.
+
+</Resultado>
+
+## Cobrança da série (carnê)
+
+Para recebíveis com integração de cobrança configurada, a ação **Emitir série (carnê)** emite a
+cobrança de **todas as parcelas em aberto** da série de uma vez, em vez de uma por uma.
+
+## Observações
+
+- **Notificação de abertura.** Apenas a primeira parcela dispara o aviso de recebível criado. Um
+  carnê de 12 parcelas disparando 12 avisos viraria uma rajada de notificações; as demais seguem
+  cobertas pelas regras da régua de cobrança por data.
+- **Cada parcela é independente na baixa.** Você pode receber a parcela 3 sem ter recebido a 2.
+
+## Problemas comuns
+
+<ProblemaComum titulo='"Para gerar parcelas, o total deve ser maior que 1"'>
+Informe 2 ou mais em **Total de parcelas**, ou desmarque o parcelamento.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Como criar um lançamento', href: '/docs/financeiro/criar-lancamento' },
+    { title: 'Cobranças (boleto e PIX)', href: '/docs/financeiro/cobrancas' },
+    { title: 'Contas a receber', href: '/docs/financeiro/contas-a-receber' },
+  ]}
+/>

@@ -1,0 +1,96 @@
+---
+title: Régua de cobrança
+description: Configure lembretes automáticos de cobrança por e-mail e WhatsApp.
+keywords:
+  - régua
+  - cobrança
+  - lembrete
+  - automático
+  - template
+  - pausar
+---
+
+A régua envia lembretes de cobrança automaticamente, com base em datas e eventos do recebível. Ela é
+formada por **regras** (quando enviar) e **templates** (o que enviar).
+
+<Permissoes>
+Área **Régua de cobrança** — criação e edição de regras e templates, e consulta do histórico de
+cobranças enviadas.
+
+</Permissoes>
+
+## Regras
+
+Em **Financeiro › Régua de cobrança**, cada regra define quando um lembrete sai:
+
+| Tipo de gatilho | Exemplos |
+| --- | --- |
+| **Por data** | 3 dias antes do vencimento, no vencimento, 5 dias após o vencimento |
+| **Por evento** | Ao emitir o boleto, quando o recebível é criado, quando a cobrança falha |
+
+Cada regra tem canal (**E-mail** ou **WhatsApp**), template vinculado, ordem e status ativo/inativo.
+A ordem define a sequência da régua, permitindo um tom crescente ao longo do tempo.
+
+<Steps>
+
+<Step>
+Clique em **Nova regra**.
+
+</Step>
+
+<Step>
+Escolha **Quando** (por data ou por evento) e informe os dias, quando for por data.
+
+</Step>
+
+<Step>
+Selecione o **Canal** e o **Template**.
+
+</Step>
+
+<Step>
+Defina a **Ordem** e salve.
+
+</Step>
+
+</Steps>
+
+Para começar rápido, **Usar régua padrão** aplica um conjunto pronto de regras. Ela só funciona
+enquanto não houver regras cadastradas.
+
+## Templates
+
+Os templates definem a mensagem. Cada um tem canal, assunto (para e-mail) e corpo, e aceita
+**variáveis** que são substituídas pelos dados reais do recebível. A tela lista as variáveis
+disponíveis e permite pré-visualizar o resultado antes de ativar.
+
+## Pausar a cobrança de um recebível
+
+Quando a marca negociou o pagamento por fora, seguir cobrando desgasta a relação. Na lista de
+recebíveis é possível **pausar a régua daquele lançamento específico** e retomá-la depois — sem
+precisar desativar a regra para todos os clientes.
+
+<Permissoes>
+Área **Financial entries** — "Permite pausar a régua de cobrança de um lançamento" e "Permite retomar
+a régua de cobrança de um lançamento".
+
+</Permissoes>
+
+<Callout type="warn" title="A régua depende de uma Conta de Integração ativa">
+  As regras podem estar configuradas e ainda assim nada ser enviado, se não houver Conta de
+  Integração ativa para o canal (e-mail ou WhatsApp). A própria tela de regras traz o atalho
+  **Configuração · Integrações**. Confira em **Integrações › Contas** antes de confiar na régua.
+
+</Callout>
+
+## Histórico
+
+O histórico de cobranças enviadas fica disponível por recebível, mostrando o que já saiu e quando.
+
+<Relacionados
+  links={[
+    { title: 'Cobranças (boleto e PIX)', href: '/docs/financeiro/cobrancas' },
+    { title: 'Contas a receber', href: '/docs/financeiro/contas-a-receber' },
+    { title: 'Contas de integração', href: '/docs/integracoes/contas' },
+  ]}
+/>

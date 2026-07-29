@@ -1,0 +1,98 @@
+---
+title: Como funciona a aprovação comercial
+description: Entenda quando uma proposta precisa de aprovação e como registrar a decisão interna.
+keywords:
+  - aprovação
+  - aprovar proposta
+  - política comercial
+  - rejeitar
+  - decisão interna
+---
+
+Existem dois sentidos diferentes de "aprovação" no Comercial. Vale separar antes de qualquer coisa.
+
+| Tipo | O que é | Quem decide |
+| --- | --- | --- |
+| **Aprovação da proposta** | Registrar internamente que a proposta foi aceita | Um usuário da agência |
+| **Aprovação interna por política** | Um gate que exige autorização antes de enviar propostas fora da política (desconto, margem, prazo) | Um gestor comercial |
+
+## Aprovação da proposta
+
+É a ação **Aprovar proposta**, usada quando a marca comunicou a decisão por fora do sistema (uma
+ligação, um e-mail) e você quer registrar isso.
+
+<Permissoes>
+Área **Proposals** — "Permite aprovar uma proposta" e "Permite rejeitar uma proposta".
+
+</Permissoes>
+
+<Steps>
+
+<Step>
+Abra a proposta em **Comercial › Propostas › Detalhes**.
+
+</Step>
+
+<Step>
+Use **Aprovar proposta** ou **Rejeitar**.
+
+</Step>
+
+<Step>
+Confirme. A rejeição pede confirmação porque é definitiva.
+
+</Step>
+
+</Steps>
+
+<Resultado>
+A proposta passa para **Aprovada** (ou **Rejeitada**). Só uma proposta aprovada pode ser
+[convertida em campanha](/docs/comercial/converter-em-campanha).
+
+</Resultado>
+
+<Callout type="warn" title="A proposta precisa ter saído do rascunho">
+  Aprovar ou rejeitar exige que a proposta esteja **Enviada** ou **Visualizada**. Uma proposta em
+  rascunho não tem decisão a registrar.
+
+</Callout>
+
+Quando a marca decide pelo próprio link público, você não precisa fazer nada: o
+[aceite](/docs/comercial/aceite-do-cliente) já muda o status e fecha a oportunidade como ganha.
+
+## Aprovação interna por política
+
+<Callout type="info" title="Desligado nesta versão">
+  O fluxo de aprovação por política comercial existe no sistema, mas está **desativado**. A tela
+  **Aprovações** e a configuração **Política comercial** não aparecem no menu, e nenhuma proposta é
+  barrada por desconto, margem ou prazo. Quem tem permissão para enviar, envia.
+
+</Callout>
+
+Quando ligado, ele funciona assim: a agência define limites (desconto máximo, margem mínima, prazo
+máximo); uma proposta que ultrapassa esses limites exibe o aviso "Esta proposta excede a política
+comercial" e o botão **Solicitar aprovação**; o envio fica bloqueado até um gestor decidir na
+**Central de Aprovações**. Alterar desconto ou prazo depois de uma aprovação concedida invalida essa
+aprovação, para que termos novos não sejam liberados por uma decisão antiga.
+
+## Problemas comuns
+
+<ProblemaComum titulo='"A proposta precisa estar enviada ou visualizada para ser aprovada"'>
+A proposta ainda está em rascunho. Envie-a antes ou, se o cliente aceitou por fora, envie e depois
+registre a aprovação.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="Aprovei a proposta mas não consigo converter">
+Confira o status: a conversão exige **Aprovada** e uma conta financeira ativa cadastrada. Veja
+[proposta bloqueada](/docs/solucao-de-problemas/proposta-bloqueada).
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Como enviar uma proposta ao cliente', href: '/docs/comercial/enviar-proposta' },
+    { title: 'Como funciona o aceite público', href: '/docs/comercial/aceite-do-cliente' },
+    { title: 'Por que uma proposta pode ficar bloqueada', href: '/docs/solucao-de-problemas/proposta-bloqueada' },
+  ]}
+/>

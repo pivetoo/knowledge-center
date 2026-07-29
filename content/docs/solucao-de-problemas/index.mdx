@@ -1,0 +1,88 @@
+---
+title: Por onde começar
+description: Por que o Mainstay bloqueia certas ações e o que fazer em cada caso.
+keywords:
+  - problema
+  - erro
+  - bloqueado
+  - travado
+  - não consigo
+  - ajuda
+---
+
+A maior parte dos "travamentos" no Mainstay é intencional: o sistema bloqueia uma ação porque ela
+deixaria um registro inconsistente. Esta seção explica o motivo de cada bloqueio e como sair dele.
+
+## Por sintoma
+
+<Cards>
+  <Card
+    title="Não consigo entrar"
+    href="/docs/solucao-de-problemas/problemas-de-acesso"
+    description="Login, sessão expirada e usuário sem módulos."
+  />
+  <Card
+    title="Não vejo uma tela ou botão"
+    href="/docs/solucao-de-problemas/permissoes-insuficientes"
+    description="Permissões, perfis e escopo próprio."
+  />
+  <Card
+    title="O cliente diz que o link não abre"
+    href="/docs/solucao-de-problemas/link-expirado"
+    description="Validade, revogação e como gerar outro."
+  />
+  <Card
+    title="A proposta não avança"
+    href="/docs/solucao-de-problemas/proposta-bloqueada"
+    description="Envio, edição, aprovação e conversão."
+  />
+  <Card
+    title="Não consigo publicar a entrega"
+    href="/docs/solucao-de-problemas/entregavel-bloqueado"
+    description="Aprovação pendente e URL de publicação."
+  />
+  <Card
+    title="O pagamento não sai"
+    href="/docs/solucao-de-problemas/pagamento-bloqueado"
+    description="Pay-when-paid, chave PIX e integração de pagamento."
+  />
+  <Card
+    title="Falta conta financeira"
+    href="/docs/solucao-de-problemas/conta-padrao-nao-configurada"
+    description="Conversão de proposta e lançamentos sem conta."
+  />
+  <Card
+    title="A baixa automática não aconteceu"
+    href="/docs/solucao-de-problemas/erro-de-conciliacao"
+    description="Consulta de pagamentos, cobrança e baixa manual."
+  />
+  <Card
+    title="Problemas com arquivos"
+    href="/docs/solucao-de-problemas/arquivos-e-anexos"
+    description="Upload, tipos aceitos e URLs externas."
+  />
+</Cards>
+
+## Antes de abrir um chamado
+
+<Steps>
+
+<Step>
+**Leia a mensagem inteira.** As mensagens de bloqueio do Mainstay dizem o motivo e, na maioria das
+vezes, o caminho da correção.
+
+</Step>
+
+<Step>
+**Confira suas permissões.** Boa parte do "sumiu o botão" é permissão. Veja
+[perfis e permissões](/docs/primeiros-passos/perfis-e-permissoes).
+
+</Step>
+
+<Step>
+**Olhe os logs quando envolver serviço externo.** Envio, cobrança, PIX e assinatura passam por
+integrações; o motivo real fica em [Integrações › Logs](/docs/integracoes/logs).
+
+</Step>
+
+</Steps>

@@ -1,0 +1,100 @@
+---
+title: Aprovação pública de entregável
+description: A página em que a marca aprova ou rejeita o conteúdo, sem login.
+keywords:
+  - aprovação
+  - entregável
+  - marca
+  - link
+  - rejeitar
+  - conteúdo
+---
+
+Quando o conteúdo está pronto para a marca avaliar, a agência gera um link de aprovação. A marca abre
+esse link e registra a decisão sem precisar de acesso ao sistema.
+
+## Como a agência gera o link
+
+<Permissoes>
+Área **Deliverable share links** — "Permite gerar um share link para aprovação da marca".
+
+</Permissoes>
+
+<Steps>
+
+<Step>
+Abra **Produção › Aprovações**. A tela lista as entregas aguardando decisão, com marca, campanha,
+influenciador e plataforma.
+
+</Step>
+
+<Step>
+Preencha o **Nome do revisor padrão** — ele identifica quem, do lado da marca, vai revisar. O nome
+fica salvo para os próximos links.
+
+</Step>
+
+<Step>
+Use **Gerar link** na entrega desejada. O link é copiado automaticamente.
+
+</Step>
+
+<Step>
+Envie o link ao contato da marca.
+
+</Step>
+
+</Steps>
+
+O botão **Copiar link da marca** dentro da revisão de conteúdo faz a mesma coisa.
+
+## O que a marca vê
+
+- o conteúdo da rodada enviada (imagem ou link externo);
+- o influenciador e o prazo da entrega;
+- o campo **Seu nome** (obrigatório, "como você se identifica");
+- o campo **Comentário (opcional)**, para registrar ajustes ou aprovações específicas;
+- os botões de aprovar e de rejeitar.
+
+Enquanto ninguém decide, a página indica **Aguardando decisão**.
+
+<Resultado>
+A aprovação da marca promove a entrega para **Aprovada** automaticamente — sem ninguém precisar mudar
+o status na mão — e libera a [publicação](/docs/producao/publicar-entregavel).
+
+</Resultado>
+
+<Callout type="warn" title="Só decide quem recebeu algo para ver">
+  Se nenhuma versão de conteúdo tiver sido enviada para a marca, o link não permite registrar a
+  decisão: *"Nenhuma versão de conteúdo foi enviada para a marca"*. Isso evita que uma entrega apareça
+  como aprovada pela marca sem que nada tenha sido mostrado a ela.
+
+</Callout>
+
+## Aprovação interna vale igual
+
+Se a agência tem autonomia para liberar, a **aprovação interna** feita na revisão de conteúdo produz
+o mesmo efeito para o gate de publicação. Não é obrigatório passar pelo link da marca — a menos que a
+campanha exija.
+
+## Problemas comuns
+
+<ProblemaComum titulo='A marca vê "Link inválido ou expirado"'>
+O link venceu ou foi substituído. A página orienta solicitar um novo link à agência — gere outro em
+**Produção › Aprovações**.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="Gerei o link mas a marca não consegue decidir">
+Verifique se há uma rodada de conteúdo em **Com a marca**. Sem versão enviada, a decisão fica
+bloqueada.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Enviar conteúdo para aprovação', href: '/docs/producao/enviar-conteudo-para-aprovacao' },
+    { title: 'Aprovar ou solicitar alterações', href: '/docs/producao/aprovar-ou-solicitar-alteracoes' },
+    { title: 'Entregável bloqueado para publicação', href: '/docs/solucao-de-problemas/entregavel-bloqueado' },
+  ]}
+/>

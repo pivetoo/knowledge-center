@@ -1,0 +1,75 @@
+---
+title: Custos e pagamentos
+description: Registre os custos da operação vinculados à campanha e acompanhe as saídas.
+keywords:
+  - contas a pagar
+  - custos
+  - saída
+  - despesa
+  - margem
+  - campanha
+---
+
+**Financeiro › Custos e pagamentos** é a tela das saídas: custos da operação e repasses, vinculados à
+campanha. É essa vinculação que forma a base da margem por campanha.
+
+<Permissoes>
+Área **Financial entries** — listagem e cadastro de lançamentos financeiros.
+
+</Permissoes>
+
+<Captura id="financeiro-pagar" />
+
+## O que entra aqui
+
+| Tipo de saída | Como chega |
+| --- | --- |
+| Repasse ao influenciador | Gerado automaticamente na publicação da entrega |
+| Custos de produção | Cadastrados manualmente (locação, edição, deslocamento) |
+| Despesas gerais | Cadastradas manualmente, sem vínculo de campanha |
+
+A tela é a mesma de [contas a receber](/docs/financeiro/contas-a-receber), com o tipo invertido:
+mesmos filtros, mesmas ações em lote, mesma exportação.
+
+## Indicadores
+
+| Indicador | O que mostra |
+| --- | --- |
+| A pagar | Total em aberto |
+| Vencido | O que passou do vencimento |
+| A pagar em 7d | O que vence na próxima semana |
+| Pago no mês | O que já saiu no mês corrente |
+
+## Vincule à campanha
+
+Sempre que a saída pertencer a uma campanha, preencha o vínculo. Sem isso, o custo não entra na
+rentabilidade daquela campanha e a margem fica otimista.
+
+<Callout title="Não existe cadastro de fornecedor">
+  O custo é registrado com o campo **Contraparte** — texto livre com o nome de quem recebe. Não há um
+  cadastro separado de fornecedores nesta versão.
+
+</Callout>
+
+## Problemas comuns
+
+<ProblemaComum titulo="O custo do influenciador apareceu duplicado">
+Provavelmente houve um lançamento manual além do gerado pela publicação da entrega. O sistema impede
+um segundo repasse do mesmo influenciador na mesma campanha; se houver dois, um deles foi criado por
+outro caminho. Cancele o duplicado.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="A margem da campanha está errada">
+Confira se todos os custos têm o vínculo de campanha preenchido. Custos sem vínculo não entram no
+relatório de rentabilidade.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Repasse a influenciador', href: '/docs/financeiro/repasse-influenciador' },
+    { title: 'Como criar um lançamento', href: '/docs/financeiro/criar-lancamento' },
+    { title: 'Relatórios financeiros', href: '/docs/financeiro/relatorios' },
+  ]}
+/>

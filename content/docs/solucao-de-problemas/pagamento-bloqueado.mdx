@@ -1,0 +1,88 @@
+---
+title: Por que um pagamento pode ficar bloqueado
+description: Motivos que impedem pagar um lançamento ou disparar um repasse ao influenciador.
+keywords:
+  - pagamento bloqueado
+  - repasse
+  - pix
+  - não sai
+  - pay-when-paid
+  - período fechado
+---
+
+Pagamentos travam por três famílias de motivo: regra de negócio da campanha, estado do lançamento e
+configuração de integração.
+
+## Repasse ao influenciador
+
+<ProblemaComum titulo='"O conteúdo do entregável ainda não foi aprovado (pay-when-paid)"'>
+A campanha tem a regra **Só liberar o repasse ao influenciador após o conteúdo aprovado** e existem
+entregas pendentes de aprovação daquele influenciador.
+
+Conclua as aprovações ou, se a regra não se aplicar a essa campanha, desmarque a opção no cadastro
+dela.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Conta bancária do repasse sem conector de repasse configurado"'>
+A conta financeira usada no repasse não tem integração de **Pagamentos** vinculada. Configure em
+**Financeiro › Contas bancárias**, selecione a conta e abra **Integrações**.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="O influenciador não tem chave PIX">
+Sem chave PIX cadastrada não há para onde enviar. O influenciador pode preencher sozinho em **Perfil
+› Dados de pagamento** no [portal](/docs/producao/portal-do-influenciador) — a tela inicial dele já
+destaca essa pendência.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"O pagamento já foi finalizado e não pode ser modificado"'>
+Pagamentos pagos ou cancelados são finais. Para corrigir, registre um novo pagamento.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Não é possível cancelar um pagamento que já foi marcado como Pago"'>
+Comportamento esperado. O ajuste contábil de um repasse já pago é feito por
+[estorno](/docs/financeiro/estorno) do lançamento correspondente.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="Um repasse ficou em Falhou">
+Abra **Ver detalhes › Histórico** e os [logs de integração](/docs/integracoes/logs) para ver o motivo
+retornado pelo banco. Reenviar reaproveita a mesma chave de idempotência, o que evita o risco de o
+PIX sair duas vezes num caso de timeout.
+
+</ProblemaComum>
+
+## Lançamento financeiro
+
+<ProblemaComum titulo='"O período financeiro está fechado"'>
+A data da baixa cai em um mês já fechado. Use uma data dentro de um mês aberto,
+[reabra o período](/docs/financeiro/fechamento-de-periodo) ou registre a correção por estorno.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"O lançamento já foi pago e não pode ser alterado"'>
+Lançamentos pagos são imutáveis. Use o [estorno](/docs/financeiro/estorno) e lance de novo.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Um lançamento pago não pode ser cancelado"'>
+Cancelamento é para lançamentos em aberto. Para um pago, o caminho é o estorno.
+
+</ProblemaComum>
+
+## Quando o estorno não resolve tudo
+
+Ao estornar um custo de influenciador que já teve PIX pago, o sistema avisa: o estorno ajusta a
+contabilidade, mas **não devolve o dinheiro**. A devolução precisa ser combinada com o influenciador
+e registrada separadamente.
+
+<Relacionados
+  links={[
+    { title: 'Repasse a influenciador', href: '/docs/financeiro/repasse-influenciador' },
+    { title: 'Como estornar um lançamento', href: '/docs/financeiro/estorno' },
+    { title: 'Fechamento de período', href: '/docs/financeiro/fechamento-de-periodo' },
+  ]}
+/>

@@ -1,0 +1,140 @@
+---
+title: Cobranças (boleto e PIX)
+description: Emita, altere e cancele a cobrança de um recebível pela integração bancária.
+keywords:
+  - boleto
+  - pix
+  - cobrança
+  - emitir
+  - linha digitável
+  - cancelar
+---
+
+O Mainstay emite boleto e PIX de um recebível usando a integração bancária vinculada à conta
+financeira. A emissão é assíncrona: você solicita e o banco confirma.
+
+<Permissoes>
+Área **Financial entries** — "Permite emitir cobrança (boleto/PIX) de um recebível", "Permite alterar
+a cobrança" e "Permite cancelar a cobrança".
+
+</Permissoes>
+
+<PreRequisitos>
+O lançamento precisa ser **a receber** e estar **em aberto** (pendente ou vencido). A conta precisa
+ter uma integração de **Cobrança** vinculada. E o recebível precisa estar ligado a uma marca com o
+cadastro do pagador completo: **CNPJ ou CPF** e **endereço completo** (CEP com 8 dígitos,
+logradouro, número, cidade e UF).
+
+</PreRequisitos>
+
+## Passo a passo
+
+<Steps>
+
+<Step>
+### Selecione o recebível
+
+Em **Financeiro › Contas a receber**, selecione a linha.
+
+</Step>
+
+<Step>
+### Emita a cobrança
+
+Use **Emitir cobrança**. Para uma série de parcelas, **Emitir série (carnê)** emite todas as parcelas
+em aberto de uma vez.
+
+</Step>
+
+<Step>
+### Acompanhe o status
+
+A cobrança passa por **Emitindo** até o provedor confirmar.
+
+</Step>
+
+<Step>
+### Envie ao cliente
+
+Em **Ver cobrança** ficam disponíveis linha digitável, código de barras, PIX copia e cola, nosso
+número, ID da transação e **Abrir boleto**.
+
+</Step>
+
+</Steps>
+
+<Resultado>
+A cobrança fica como **Emitida** e o boleto ou PIX existe no banco. Quando o cliente paga, a
+[conciliação](/docs/financeiro/conciliacao) dá baixa no recebível.
+
+</Resultado>
+
+## Status da cobrança
+
+| Status | Significado |
+| --- | --- |
+| Não emitida | Ainda não foi solicitada |
+| Emitindo | Solicitada, aguardando o banco |
+| Emitida | Boleto ou PIX disponível |
+| Paga | Liquidada |
+| Cancelada | Cancelada no provedor |
+| Falhou | O banco recusou a emissão |
+
+## Alterar uma cobrança
+
+**Alterar cobrança** permite ajustar vencimento, desconto, multa e juros ao mês.
+
+<Callout type="warn" title="Mudar o valor pode gerar um novo boleto">
+  Alterar o valor pode cancelar e reemitir o boleto no banco — com novo código e nova linha
+  digitável. Se o cliente já recebeu o anterior, reenvie o documento atualizado.
+
+</Callout>
+
+## Cancelar uma cobrança
+
+**Cancelar cobrança** cancela o documento no provedor. O recebível **continua em aberto** e pode ser
+reemitido depois. Você pode informar um motivo.
+
+## Emissão em lote e agendada
+
+Selecione vários recebíveis e use **Agendar lote**. Sem data (ou com data no passado), a emissão é
+imediata; com data futura, o sistema guarda o agendamento e emite quando o momento chegar.
+
+## Problemas comuns
+
+<ProblemaComum titulo='"Nenhuma integração de cobrança vinculada a esta conta"'>
+Vá em **Financeiro › Contas bancárias**, selecione a conta, abra **Integrações** e vincule a Conta de
+Integração de **Cobrança**.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Documento do pagador obrigatório"'>
+O recebível precisa estar vinculado a uma marca com CNPJ ou CPF preenchido. Complete o cadastro da
+marca e emita novamente.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Endereço do pagador incompleto"'>
+O banco exige o endereço completo do pagador no boleto. Preencha **CEP** (8 dígitos), **logradouro**,
+**número**, **cidade** e **UF** no cadastro da marca e emita novamente.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Só é possível emitir cobrança de um recebível em aberto"'>
+O lançamento já foi pago ou cancelado. Cobranças só existem para recebíveis pendentes ou vencidos.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="A cobrança ficou em Falhou">
+O banco recusou a emissão. Abra **Integrações › Logs** para ver o motivo, corrija e use
+**Reprocessar integração**.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Conciliação de pagamentos', href: '/docs/financeiro/conciliacao' },
+    { title: 'Régua de cobrança', href: '/docs/financeiro/regua-de-cobranca' },
+    { title: 'Como criar uma conta financeira', href: '/docs/financeiro/contas-financeiras' },
+  ]}
+/>

@@ -1,0 +1,106 @@
+---
+title: Como fechar um período financeiro
+description: Trave um mês para impedir lançamentos retroativos e reabra quando precisar corrigir.
+keywords:
+  - fechamento
+  - período
+  - fechar mês
+  - reabrir
+  - travar
+  - retroativo
+---
+
+Fechar o mês trava o passado. Depois disso, ninguém cria, edita ou dá baixa em lançamentos com data
+dentro daquele mês — o que impede que um número já reportado mude sozinho.
+
+<Permissoes>
+Área **Períodos financeiros** — "Permite fechar um período financeiro (trava lançamentos do mês)" e
+"Permite reabrir um período financeiro fechado".
+
+</Permissoes>
+
+<Captura id="financeiro-periodos" />
+
+## Passo a passo
+
+<Steps>
+
+<Step>
+### Abra a tela
+
+**Financeiro › Períodos**. A lista mostra os meses recentes e o status de cada um: **Aberto** ou
+**Fechado**.
+
+</Step>
+
+<Step>
+### Confira antes de fechar
+
+Deixe o mês em ordem: baixas registradas, custos lançados e repasses conciliados.
+
+</Step>
+
+<Step>
+### Feche
+
+Clique em **Fechar** no mês desejado e confirme.
+
+</Step>
+
+</Steps>
+
+<Resultado>
+O mês passa para **Fechado**, com registro de quem fechou. Lançamentos com data dentro dele ficam
+bloqueados para criação, edição e baixa.
+
+</Resultado>
+
+## O que fica bloqueado
+
+| Ação com data dentro do mês fechado | Permitido? |
+| --- | --- |
+| Criar lançamento | Não |
+| Editar lançamento | Não |
+| Marcar como pago | Não |
+| Gerar parcelas | Não |
+| **Estornar** | **Sim** |
+
+O estorno continua liberado de propósito: a contrapartida é lançada no mês aberto, então ele é o
+caminho certo para corrigir um mês já fechado sem reabri-lo.
+
+## Reabrir um período
+
+Use **Reabrir** no mês fechado. Ele volta a aceitar lançamentos e alterações com data dentro dele, e
+o sistema registra quem reabriu.
+
+<Callout type="warn" title="Reabrir muda números já reportados">
+  Se o mês já foi usado em algum fechamento contábil ou relatório enviado, reabrir e alterar
+  lançamentos faz esses números divergirem. Prefira o estorno sempre que possível.
+
+</Callout>
+
+## O alerta do Monitor
+
+O Monitor financeiro avisa quando o **mês anterior ainda está aberto**, com o atalho **Fechar mês**.
+É a lembrança de fechar o ciclo dentro do prazo.
+
+## Problemas comuns
+
+<ProblemaComum titulo='"O período financeiro está fechado. Reabra o mês para lançar ou alterar valores nessa data."'>
+Confira a data do lançamento. Se ela estiver correta e o lançamento for legítimo, reabra o mês, faça
+o ajuste e feche de novo — ou registre a correção via estorno, sem reabrir.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Este período já está fechado" / "Este período não está fechado"'>
+Outra pessoa já executou a ação. Atualize a lista e confira o status atual.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Como estornar um lançamento', href: '/docs/financeiro/estorno' },
+    { title: 'Como registrar um pagamento', href: '/docs/financeiro/registrar-pagamento' },
+    { title: 'Relatórios financeiros', href: '/docs/financeiro/relatorios' },
+  ]}
+/>

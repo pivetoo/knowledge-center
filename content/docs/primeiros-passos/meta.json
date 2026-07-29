@@ -1,0 +1,13 @@
+{
+  "title": "Primeiros passos",
+  "icon": "Compass",
+  "pages": [
+    "index",
+    "visao-geral",
+    "como-acessar",
+    "como-navegar",
+    "modulos",
+    "perfis-e-permissoes",
+    "conceitos"
+  ]
+}

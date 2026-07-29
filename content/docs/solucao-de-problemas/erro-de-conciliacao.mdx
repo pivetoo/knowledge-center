@@ -1,0 +1,97 @@
+---
+title: Erro de conciliação
+description: O cliente pagou mas o recebível continua em aberto — o que verificar.
+keywords:
+  - conciliação
+  - baixa
+  - não baixou
+  - boleto pago
+  - liquidação
+  - extrato
+---
+
+A conciliação automática do Mainstay dá baixa nos recebíveis cujas **cobranças emitidas pelo próprio
+sistema** foram liquidadas no banco. Quando ela não acontece, o motivo costuma estar em um dos quatro
+pontos abaixo.
+
+<Callout type="warn" title="Nem tudo concilia sozinho">
+  Não existe importação manual de extrato nesta versão. Pagamentos que não passaram por uma cobrança
+  emitida pelo Mainstay — transferências, depósitos, boletos emitidos por fora — precisam de
+  [baixa manual](/docs/financeiro/registrar-pagamento). Isso não é falha.
+
+</Callout>
+
+## Lista de verificação
+
+<Steps>
+
+<Step>
+### A cobrança foi emitida pelo Mainstay?
+
+Abra o recebível e confira o status da cobrança. Só há conciliação automática quando ela está
+**Emitida**. **Não emitida** significa que o boleto veio de outro caminho.
+
+</Step>
+
+<Step>
+### A consulta de pagamentos está ligada?
+
+Em **Financeiro › Contas bancárias**, selecione a conta e abra **Integrações**. A opção **Consultar
+pagamentos** precisa estar ativa — e ela depende de uma integração de **Cobrança** vinculada.
+
+</Step>
+
+<Step>
+### A conta está sincronizando?
+
+Na lista de contas, confira **Última sincronização** e o indicador **Sincronizadas**. Uma conta que
+nunca sincronizou aparece como não sincronizada.
+
+</Step>
+
+<Step>
+### Houve falha na comunicação?
+
+Abra [Integrações › Logs](/docs/integracoes/logs) e procure execuções com erro do conector daquela
+conta.
+
+</Step>
+
+</Steps>
+
+<Resultado>
+Corrigido o ponto que falhava, a próxima consulta baixa os recebíveis liquidados. Reprocessar a mesma
+liquidação não gera baixa duplicada.
+
+</Resultado>
+
+## Enquanto isso, faça a baixa manual
+
+Não espere a conciliação para fechar o mês. Registre o recebimento manualmente — a conciliação é
+idempotente e não vai duplicar a baixa depois.
+
+## Problemas relacionados
+
+<ProblemaComum titulo="A opção Consultar pagamentos está desabilitada">
+A conta não tem integração de **Cobrança** vinculada. Sem ela não há de quem consultar os liquidados.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="A cobrança ficou com status Falhou">
+O banco recusou a emissão. Veja o motivo nos logs, corrija e use **Reprocessar integração** na lista
+de recebíveis.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="O cliente pagou valor menor que o boleto">
+Registre o recebimento parcial: informe o valor recebido e o lançamento continua aberto pelo saldo.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Conciliação de pagamentos', href: '/docs/financeiro/conciliacao' },
+    { title: 'Cobranças (boleto e PIX)', href: '/docs/financeiro/cobrancas' },
+    { title: 'Como registrar um pagamento', href: '/docs/financeiro/registrar-pagamento' },
+  ]}
+/>

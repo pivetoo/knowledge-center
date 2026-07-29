@@ -1,0 +1,71 @@
+---
+title: Perfis e permissões
+description: Como o Mainstay decide o que cada usuário pode ver e fazer.
+keywords:
+  - permissões
+  - perfil
+  - acesso negado
+  - controle de acesso
+  - usuários
+  - papel
+---
+
+Cada usuário do Mainstay tem um **perfil**, e o perfil carrega uma lista de permissões. A permissão é
+específica: existe uma para listar oportunidades, outra para criar, outra para enviar proposta, outra
+para marcar um lançamento como pago.
+
+## Como a permissão aparece na prática
+
+A permissão age em duas camadas:
+
+1. **No menu.** Uma tela que você não pode acessar simplesmente não aparece. Se você não tem nenhuma
+   permissão do Financeiro, o módulo inteiro some do menu.
+2. **Na ação.** Dentro de uma tela que você pode ver, botões de ações que você não pode executar ficam
+   indisponíveis. Se a ação for tentada mesmo assim, o sistema responde com erro de permissão.
+
+<Callout title="Perfil administrador">
+  Usuários marcados como administradores da agência enxergam todas as telas e ações, sem depender da
+  lista de permissões.
+
+</Callout>
+
+## Permissões por escopo próprio
+
+Algumas permissões do Comercial existem em duas versões: a geral e a "própria". Quem tem a versão
+própria vê apenas as oportunidades em que é o responsável. É o caso do funil, da lista de
+oportunidades, do forecast e das análises.
+
+## Onde ajustar
+
+Administradores acessam **Controle de Acesso** e vinculam permissões ao perfil. Na tela de seleção,
+as permissões vêm agrupadas por área (Opportunities, Proposals, Campaigns, Financial entries,
+Creator payments, entre outras) e cada uma traz a descrição em português do que ela libera — por
+exemplo, "Permite enviar uma proposta para a marca".
+
+<Callout type="warn" title="Permissão é por perfil, não por pessoa">
+  Alterar um perfil afeta todos os usuários vinculados a ele. Para liberar algo só para uma pessoa,
+  crie um perfil específico.
+
+</Callout>
+
+## Problemas comuns
+
+<ProblemaComum titulo="Um colega vê uma tela que eu não vejo">
+Vocês estão em perfis diferentes. Compare os dois perfis em Controle de Acesso: a tela ausente
+corresponde a uma permissão que só um dos perfis tem.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="Recebi 'acesso negado' em uma ação dentro de uma tela que eu abro normalmente">
+Ver e agir são permissões separadas. Você tem a de consulta, mas não a da ação (criar, enviar,
+aprovar, baixar). Peça a permissão correspondente.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Permissões insuficientes', href: '/docs/solucao-de-problemas/permissoes-insuficientes' },
+    { title: 'Problemas de acesso', href: '/docs/solucao-de-problemas/problemas-de-acesso' },
+    { title: 'Como acessar o sistema', href: '/docs/primeiros-passos/como-acessar' },
+  ]}
+/>

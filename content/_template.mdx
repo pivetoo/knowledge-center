@@ -1,0 +1,101 @@
+---
+title: Como fazer alguma coisa
+description: Uma frase que explique o que o leitor consegue fazer depois de ler este artigo.
+keywords:
+  - palavra que o usuário digitaria na busca
+  - nome da tela
+  - nome do botão
+  - mensagem de erro relacionada
+---
+
+{/*
+  TEMPLATE DE ARTIGO DA CENTRAL DE AJUDA MAINSTAY
+
+  Como usar:
+  1. Copie este arquivo para content/docs/<area>/<slug>.mdx
+     - o slug vira URL: sem acento, sem espaço, tudo minúsculo, separado por hífen
+  2. Preencha o frontmatter acima
+  3. Inclua o slug no meta.json da pasta, na posição desejada
+  4. Apague as seções que não se aplicam — não deixe seção vazia
+  5. Apague este comentário
+
+  Regras de conteúdo:
+  - Escreva para o operador, não para o desenvolvedor
+  - Use os nomes exatos que aparecem na tela (em negrito)
+  - Não invente telas, botões, permissões ou comportamentos
+  - Não confirmou algo no sistema? Marque com TODO e registre em PENDENCIAS-DOCUMENTAIS.md
+*/}
+
+Um ou dois parágrafos de introdução: o que é isso, por que importa e em que momento do fluxo entra.
+Evite repetir o título.
+
+<Permissoes>
+Área **Nome da área no Controle de Acesso** — "Descrição da permissão como aparece na tela".
+
+</Permissoes>
+
+<PreRequisitos>
+O que precisa estar pronto antes. Cadastros, integrações, status mínimo do registro.
+
+</PreRequisitos>
+
+{/* Botao que abre a captura real da tela. O id precisa existir em lib/capturas.gen.ts;
+    rode `npm run capturas` para gerar. Ver README, secao "Capturas de tela". */}
+<Captura id="comercial-funil" />
+
+## Passo a passo
+
+<Steps>
+
+<Step>
+### Título do passo
+
+O que fazer. Uma ação por passo.
+
+</Step>
+
+<Step>
+### Outro passo
+
+Quando o passo tiver campos, use uma tabela:
+
+| Campo | O que informar |
+| --- | --- |
+| **Nome do campo** | Explicação curta |
+
+</Step>
+
+</Steps>
+
+<Resultado>
+O que o leitor vê na tela quando deu certo. Seja concreto: status que muda, item que aparece na
+lista, indicador que é atualizado.
+
+</Resultado>
+
+## Observações
+
+Regras que o leitor precisa conhecer mas que não são um passo: o que o sistema faz sozinho, o que
+não pode ser desfeito, o que muda em outro módulo.
+
+<Callout type="warn" title="Aviso importante">
+  Use para o que causa retrabalho ou perda de dado. `type` aceita `info`, `warn`, `error`, `success`
+  e `idea`.
+
+</Callout>
+
+## Problemas comuns
+
+<ProblemaComum titulo='"Mensagem exata que o sistema mostra"'>
+Por que aparece e como resolver. Copie a mensagem literal — é assim que o leitor encontra o artigo
+pela busca.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Artigo anterior no fluxo', href: '/docs/area/slug' },
+    { title: 'Próximo passo natural', href: '/docs/area/slug' },
+    { title: 'Problema relacionado', href: '/docs/solucao-de-problemas/slug' },
+  ]}
+/>

@@ -1,0 +1,116 @@
+---
+title: Como criar uma campanha
+description: Cadastre uma campanha com marca, objetivo, budget, período e regras de aprovação.
+keywords:
+  - campanha
+  - criar
+  - budget
+  - objetivo
+  - status
+  - aprovação
+---
+
+A campanha é a unidade de execução da Produção. Ela pode nascer de duas formas: automaticamente, na
+[conversão de uma proposta](/docs/comercial/converter-em-campanha), ou manualmente, quando o trabalho
+não veio de uma proposta.
+
+<Permissoes>
+Área **Campaigns** — "Permite cadastrar uma nova campanha".
+
+</Permissoes>
+
+<Captura id="producao-campanhas" />
+
+## Passo a passo
+
+<Steps>
+
+<Step>
+### Abra o formulário
+
+**Produção › Campanhas** e clique em **Nova campanha**.
+
+</Step>
+
+<Step>
+### Identifique a campanha
+
+Nome, **Marca** e **Objetivo**.
+
+</Step>
+
+<Step>
+### Defina orçamento e período
+
+**Budget**, **Início** e **Término**. O budget é a referência de margem: a campanha compara o custo
+dos influenciadores com esse valor.
+
+</Step>
+
+<Step>
+### Escolha o status inicial
+
+| Status | Quando usar |
+| --- | --- |
+| Rascunho | Ainda montando |
+| Planejada | Fechada, mas ainda não começou |
+| Em execução | Produção em andamento |
+| Em revisão | Conteúdo em avaliação |
+| Concluída | Encerrada |
+| Cancelada | Abortada |
+
+</Step>
+
+<Step>
+### Defina o responsável comercial
+
+</Step>
+
+<Step>
+### Ajuste as duas regras da campanha
+
+Estas duas caixas decidem como a campanha se comporta depois:
+
+- **Exigir aprovação da marca para publicar entregáveis** — quando marcada, nenhuma entrega vai ao ar
+  sem uma aprovação registrada. É o padrão recomendado.
+- **Só liberar o repasse ao influenciador após o conteúdo aprovado (pay-when-paid)** — quando marcada,
+  o agendamento do repasse só acontece com todas as entregas do influenciador aprovadas.
+
+</Step>
+
+<Step>
+### Salve
+
+</Step>
+
+</Steps>
+
+<Resultado>
+A campanha aparece na lista e o detalhe abre com as abas **Influenciadores**, **Documentos**,
+**Entregas**, **Briefing** e **Calendário**.
+
+</Resultado>
+
+## O status muda sozinho
+
+Ao cadastrar a primeira entrega, uma campanha em **Rascunho** ou **Planejada** passa automaticamente
+para **Em execução**. Você não precisa mudar o status na mão para começar a produzir.
+
+<Callout type="warn" title="Campanha cancelada não volta">
+  Uma campanha cancelada não pode ser reaberta. Se houver chance de retomada, prefira mantê-la em
+  outro status.
+
+</Callout>
+
+## Próximos passos
+
+O painel **Próximos passos**, no detalhe da campanha, resume o que falta: entregas atrasadas,
+entregas aguardando aprovação, influenciadores sem contrato assinado e estouro de orçamento.
+
+<Relacionados
+  links={[
+    { title: 'Influenciadores na campanha', href: '/docs/producao/influenciadores-na-campanha' },
+    { title: 'Briefing da campanha', href: '/docs/producao/briefing' },
+    { title: 'Como criar um entregável', href: '/docs/producao/criar-entregavel' },
+  ]}
+/>

@@ -1,0 +1,106 @@
+---
+title: Como aprovar ou solicitar alterações
+description: Registre a decisão sobre uma rodada de conteúdo, internamente ou pela marca.
+keywords:
+  - aprovar
+  - solicitar alteração
+  - revisão
+  - aprovação interna
+  - marca
+  - decisão
+---
+
+Uma rodada de revisão termina de dois jeitos: aprovada ou com alteração solicitada. A decisão pode
+vir da agência (aprovação interna) ou da marca (pelo link público).
+
+<Permissoes>
+Áreas **Content review** e **Deliverable approvals** — decisão sobre a rodada e registro da aprovação
+da entrega.
+
+</Permissoes>
+
+<Captura id="producao-aprovacoes" />
+
+## Status de uma rodada
+
+| Status | Significado |
+| --- | --- |
+| Revisão interna | A agência está avaliando |
+| Com a marca | Enviada, aguardando decisão da marca |
+| Alteração solicitada | Precisa de uma nova versão |
+| Aprovada | Liberada |
+
+## Aprovação interna
+
+Quando a agência tem autonomia para liberar sem passar pela marca:
+
+<Steps>
+
+<Step>
+Abra a **Revisão** da entrega.
+
+</Step>
+
+<Step>
+Use **Aprovar internamente**.
+
+</Step>
+
+</Steps>
+
+<Resultado>
+A rodada é aprovada, a entrega passa para **Aprovada** e uma aprovação do tipo **Interna** fica
+registrada — a mesma que o sistema consulta na hora de liberar a publicação.
+
+</Resultado>
+
+## Aprovação pela marca
+
+A marca decide na página pública, informando o nome de quem está aprovando e, opcionalmente, um
+comentário. Ela pode aprovar ou rejeitar. Veja
+[aprovação pública de entregável](/docs/portais-publicos/aprovacao-de-entregavel).
+
+<Callout type="warn" title="A marca só decide se houver rodada enviada">
+  Se nenhuma versão tiver sido enviada para a marca, o link não permite registrar decisão. Isso evita
+  que a entrega apareça como aprovada sem que nada tenha sido mostrado ao cliente.
+
+</Callout>
+
+## Solicitar alteração
+
+Use **Pedir alteração** e registre no comentário o que precisa mudar. A rodada passa para **Alteração
+solicitada** e libera o envio de uma nova versão.
+
+## Onde acompanhar
+
+**Produção › Aprovações** lista as entregas aguardando decisão, com marca, campanha, influenciador,
+plataforma, status da entrega e aprovações já registradas. É de lá que você
+[gera o link para a marca](/docs/portais-publicos/aprovacao-de-entregavel).
+
+<Callout title="Interna e da marca valem igual">
+  Para liberar a publicação, o sistema aceita uma aprovação **da marca** ou **interna**. As duas
+  contam da mesma forma.
+
+</Callout>
+
+## Problemas comuns
+
+<ProblemaComum titulo='"Transição de status inválida para esta versão"'>
+A ação não cabe no estado atual da rodada — por exemplo, aprovar algo que já foi aprovado. Recarregue
+a revisão e confira o status atual.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Apenas a agência pode adicionar comentários internos"'>
+O comentário interno é exclusivo da agência. Para falar com a marca ou o influenciador, use os
+comentários compartilhados.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Enviar conteúdo para aprovação', href: '/docs/producao/enviar-conteudo-para-aprovacao' },
+    { title: 'Como publicar um entregável', href: '/docs/producao/publicar-entregavel' },
+    { title: 'Entregável bloqueado para publicação', href: '/docs/solucao-de-problemas/entregavel-bloqueado' },
+  ]}
+/>

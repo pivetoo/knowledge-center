@@ -1,0 +1,100 @@
+---
+title: Visão geral do Financeiro
+description: Contas, lançamentos, cobranças, repasses, conciliação e fechamento do mês.
+keywords:
+  - financeiro
+  - lançamento
+  - cobrança
+  - repasse
+  - caixa
+  - fechamento
+---
+
+O módulo Financeiro registra o dinheiro que entra e sai de cada campanha. Boa parte dos lançamentos
+nasce sozinha: a conversão da proposta gera o recebível da marca e a publicação da entrega gera o
+custo do influenciador.
+
+<Captura id="financeiro-monitor" />
+
+## Ordem recomendada de configuração
+
+<Steps>
+
+<Step>
+[Cadastre as contas financeiras](/docs/financeiro/contas-financeiras) — caixa, contas bancárias e
+cartões.
+
+</Step>
+
+<Step>
+[Defina a conta padrão](/docs/financeiro/conta-padrao).
+
+</Step>
+
+<Step>
+Se for emitir boleto ou PIX, vincule a integração de
+[cobrança](/docs/financeiro/cobrancas) à conta.
+
+</Step>
+
+<Step>
+Ajuste a [régua de cobrança](/docs/financeiro/regua-de-cobranca) e as subcategorias financeiras.
+
+</Step>
+
+</Steps>
+
+## O dia a dia
+
+<Cards>
+  <Card
+    title="Criar um lançamento"
+    href="/docs/financeiro/criar-lancamento"
+    description="Entradas e saídas, com vínculo de marca, campanha e entrega."
+  />
+  <Card
+    title="Registrar um pagamento"
+    href="/docs/financeiro/registrar-pagamento"
+    description="Dar baixa em um lançamento recebido ou pago."
+  />
+  <Card
+    title="Repasse a influenciador"
+    href="/docs/financeiro/repasse-influenciador"
+    description="Pagamento individual ou em lote, com nota fiscal."
+  />
+  <Card
+    title="Estorno"
+    href="/docs/financeiro/estorno"
+    description="Anular contabilmente um lançamento já pago."
+  />
+  <Card
+    title="Conciliação"
+    href="/docs/financeiro/conciliacao"
+    description="Baixa automática das cobranças liquidadas no banco."
+  />
+  <Card
+    title="Fechamento de período"
+    href="/docs/financeiro/fechamento-de-periodo"
+    description="Travar o mês para não haver lançamento retroativo."
+  />
+</Cards>
+
+## Monitor financeiro
+
+**Financeiro › Monitor** é a tela de abertura do módulo. Ela reúne os indicadores (a receber, a
+pagar, fluxo líquido de 30 dias, repasses na fila) e uma **central de alertas** com o que precisa de
+ação: vencidos a receber e a pagar, vencimentos nas próximas 48 horas, caixa projetado negativo,
+repasses com falha no pagamento e mês anterior ainda aberto. Cada alerta leva direto à tela
+correspondente.
+
+Quando não há nada pendente, a tela mostra **"Nenhum alerta. Financeiro em dia."**
+
+## De onde vêm os lançamentos
+
+| Origem | O que gera |
+| --- | --- |
+| Conversão da proposta em campanha | O recebível da marca |
+| Publicação de uma entrega | O custo (repasse) do influenciador |
+| Cadastro manual | Qualquer outra entrada ou saída |
+
+Lançamentos gerados automaticamente aparecem marcados com o selo **Auto**.

@@ -1,0 +1,100 @@
+---
+title: Entregável bloqueado para publicação
+description: Por que uma entrega não pode ser publicada e como destravar.
+keywords:
+  - entregável
+  - publicar
+  - bloqueado
+  - aprovação
+  - url
+  - revisão
+---
+
+A publicação é o único ponto do fluxo de produção com bloqueio forte. Ela existe para impedir que
+conteúdo não aprovado vá ao ar em nome da marca.
+
+## Os dois bloqueios
+
+<ProblemaComum titulo='"A entrega só pode ser publicada após aprovação da marca"'>
+Não há aprovação registrada para esta entrega. O sistema aceita qualquer uma das duas:
+
+- **aprovação da marca**, registrada pelo link público de aprovação;
+- **aprovação interna**, registrada pela agência na revisão de conteúdo.
+
+Se a agência tem autonomia, **Aprovar internamente** resolve na hora.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"A URL de publicação é obrigatória para entregas publicadas"'>
+Preencha o campo **URL publicada** com o endereço do post antes de mudar o status.
+
+</ProblemaComum>
+
+## Como destravar
+
+<Steps>
+
+<Step>
+### Confira se há rodada enviada
+
+Abra a **Revisão** da entrega. Se não houver versão de conteúdo, suba uma.
+
+</Step>
+
+<Step>
+### Registre a aprovação
+
+Aprove internamente ou gere o link em **Produção › Aprovações** e envie para a marca decidir.
+
+</Step>
+
+<Step>
+### Informe a URL
+
+Cole o endereço do post publicado.
+
+</Step>
+
+<Step>
+### Marque como publicada
+
+</Step>
+
+</Steps>
+
+<Resultado>
+A entrega passa para **Publicada** e o repasse do influenciador é gerado no Financeiro.
+
+</Resultado>
+
+## Problemas relacionados na revisão
+
+<ProblemaComum titulo='"Nenhuma versão de conteúdo foi enviada para a marca"'>
+A marca abriu o link mas não consegue decidir porque nada foi enviado a ela. Na revisão, use **Enviar
+pra marca** antes de compartilhar o link.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Já existe uma versão em revisão para esta entrega"'>
+Só pode haver uma rodada aberta por vez. Conclua a atual (aprovando ou pedindo alteração) antes de
+subir a próxima versão.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Transição de status inválida para esta versão"'>
+A ação não cabe no estado atual da rodada. Recarregue a revisão e confira o status antes de repetir.
+
+</ProblemaComum>
+
+## Quando o gate não deveria existir
+
+Se a campanha não exige aprovação da marca para publicar (a opção fica no cadastro da campanha), o
+bloqueio de aprovação não se aplica. A URL publicada continua obrigatória em qualquer caso.
+
+<Relacionados
+  links={[
+    { title: 'Como publicar um entregável', href: '/docs/producao/publicar-entregavel' },
+    { title: 'Aprovar ou solicitar alterações', href: '/docs/producao/aprovar-ou-solicitar-alteracoes' },
+    { title: 'Aprovação pública de entregável', href: '/docs/portais-publicos/aprovacao-de-entregavel' },
+  ]}
+/>

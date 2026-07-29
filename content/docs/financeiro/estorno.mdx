@@ -1,0 +1,101 @@
+---
+title: Como estornar um lançamento
+description: Anule contabilmente um lançamento já pago criando o lançamento de contrapartida.
+keywords:
+  - estorno
+  - estornar
+  - contrapartida
+  - anular
+  - devolução
+  - corrigir
+---
+
+O estorno anula contabilmente um lançamento **já pago**. Ele não apaga nada: cria um lançamento de
+contrapartida com o valor invertido, preservando o histórico.
+
+<Permissoes>
+Área **Financial entries** — "Permite estornar um lançamento financeiro pago (contrapartida)".
+
+</Permissoes>
+
+<PreRequisitos>
+O lançamento precisa estar com status **Pago**. Lançamentos pendentes não são estornados — eles são
+cancelados.
+
+</PreRequisitos>
+
+## Passo a passo
+
+<Steps>
+
+<Step>
+Selecione o lançamento pago na lista.
+
+</Step>
+
+<Step>
+Acione o estorno e informe o **motivo** (opcional, mas recomendado).
+
+</Step>
+
+<Step>
+Confirme.
+
+</Step>
+
+</Steps>
+
+<Resultado>
+O lançamento original recebe o selo **Estornado** e um novo lançamento é criado com a descrição
+"Estorno do lançamento #N", com o valor invertido.
+
+</Resultado>
+
+## Estorno x cancelamento
+
+| Situação | Ação correta |
+| --- | --- |
+| Lançamento **pago** por engano ou com valor errado | Estornar |
+| Lançamento **em aberto** que não vai acontecer | Cancelar |
+
+Cancelar um lançamento em aberto que tenha cobrança emitida cancela também a cobrança. Um lançamento
+pago não pode ser cancelado.
+
+## Estorno e período fechado
+
+O estorno continua permitido mesmo com o mês do lançamento original fechado, porque a contrapartida é
+lançada no mês aberto. É justamente por isso que ele é o caminho correto para corrigir um mês já
+encerrado.
+
+<Callout type="warn" title="Estorno contábil não desfaz PIX">
+  Ao estornar um custo de influenciador que já teve repasse pago via PIX, o sistema avisa: o estorno
+  ajusta a contabilidade, mas **não devolve o dinheiro**. A devolução precisa ser combinada com o
+  influenciador e registrada como um novo lançamento.
+
+</Callout>
+
+## Problemas comuns
+
+<ProblemaComum titulo='"Só lançamentos pagos podem ser estornados"'>
+O lançamento está em aberto. Use o cancelamento.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Este lançamento já foi estornado"'>
+Cada lançamento é estornado uma vez só. Confira se a contrapartida já existe na lista.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Não é possível estornar um lançamento de estorno"'>
+A contrapartida não pode ser estornada. Para reverter, crie um novo lançamento com o valor
+correspondente.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Como registrar um pagamento', href: '/docs/financeiro/registrar-pagamento' },
+    { title: 'Fechamento de período', href: '/docs/financeiro/fechamento-de-periodo' },
+    { title: 'Repasse a influenciador', href: '/docs/financeiro/repasse-influenciador' },
+  ]}
+/>

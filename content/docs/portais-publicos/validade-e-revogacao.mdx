@@ -1,0 +1,83 @@
+---
+title: Validade, expiração e revogação de links
+description: Quanto tempo cada link público dura, como revogá-lo e o que o destinatário passa a ver.
+keywords:
+  - validade
+  - expiração
+  - revogar
+  - link expirado
+  - segurança
+  - acesso
+---
+
+Todo link público do Mainstay tem prazo e pode ser desativado. Este artigo reúne as regras dos quatro
+tipos de link em um lugar.
+
+## Quadro comparativo
+
+| Link | Validade | Como revogar |
+| --- | --- | --- |
+| Proposta pública | Definida ao gerar (o envio usa 30 dias por padrão); limitada também pela validade da proposta | Aba de compartilhamento da proposta, ação **Revogar** |
+| Portal do influenciador | Definida ao emitir (sugestão de 30 dias) | **Produção › Influenciadores › Links do portal**, ação de revogar |
+| Aprovação de entregável | Definida ao gerar | Gerar um novo link substitui o anterior no fluxo |
+| Relatório de campanha | Definida ao gerar | Gerar um novo link |
+
+## O que acontece quando expira
+
+O destinatário vê uma mensagem de link inválido — e o conteúdo protegido para de responder, incluindo
+o PDF da proposta. Nenhum dado fica exposto depois da expiração.
+
+| Link | Mensagem que o destinatário vê |
+| --- | --- |
+| Proposta | Página indisponível |
+| Portal do influenciador | "Link de acesso inválido, expirado ou revogado" |
+| Aprovação de entregável | "Link inválido ou expirado — solicite um novo link de aprovação à agência" |
+| Relatório de campanha | "Relatório não encontrado ou link expirado" |
+
+## Situações que invalidam o link antes do prazo
+
+- **Proposta rejeitada, cancelada ou com validade vencida** — o link para de funcionar, mesmo dentro
+  do prazo dele.
+- **Revogação manual** — o efeito é imediato: quem já tinha aberto perde o acesso.
+
+## Boas práticas
+
+<Steps>
+
+<Step>
+**Prazo curto para links sensíveis.** O portal do influenciador dá acesso a contratos e dados de
+pagamento — prefira validades curtas e renove quando necessário.
+
+</Step>
+
+<Step>
+**Use a observação.** Ao emitir um link do portal, registre para que ele serve ("assinatura do
+contrato da campanha X"). Isso facilita revogar o link certo depois.
+
+</Step>
+
+<Step>
+**Revogue ao suspeitar de vazamento.** Não existe reativação: revogar e gerar outro é o caminho.
+
+</Step>
+
+<Step>
+**Acompanhe o engajamento.** Na proposta, o histórico de aberturas mostra quantos acessos houve e
+quando — um sinal útil de que o link circulou mais do que o esperado.
+
+</Step>
+
+</Steps>
+
+<Callout type="warn" title="Revogar não tem volta">
+  Um link revogado não volta a funcionar. Gere um novo e reenvie ao destinatário.
+
+</Callout>
+
+<Relacionados
+  links={[
+    { title: 'Link expirado', href: '/docs/solucao-de-problemas/link-expirado' },
+    { title: 'Link público da proposta', href: '/docs/comercial/link-publico' },
+    { title: 'Portal do influenciador', href: '/docs/producao/portal-do-influenciador' },
+  ]}
+/>

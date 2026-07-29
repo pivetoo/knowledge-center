@@ -1,0 +1,66 @@
+---
+title: Relatórios financeiros
+description: Fluxo de caixa, projeção, aging, resultado, rentabilidade e retenções fiscais.
+keywords:
+  - relatório
+  - fluxo de caixa
+  - projeção
+  - aging
+  - rentabilidade
+  - retenções
+  - competência
+---
+
+Os relatórios financeiros ficam em **Relatórios › Financeiro**. Cada um responde a uma pergunta
+diferente — e usa um critério diferente. Confundir os critérios é a causa mais comum de "os números
+não batem".
+
+<Captura id="relatorios" />
+
+## Fluxo de caixa
+
+Entradas e saídas **pela data de pagamento** (regime de caixa). Responde: quanto entrou e saiu de
+fato no período. Permite escolher o intervalo e a granularidade.
+
+<Callout title="Caixa não bate com competência — e não deveria">
+  O fluxo de caixa usa a data do pagamento; o resultado por competência usa a data do fato gerador.
+  A diferença entre os dois é esperada e a própria tela explicita o critério.
+
+</Callout>
+
+## Projeção de fluxo
+
+Projeta o saldo futuro a partir dos vencimentos em aberto. É o relatório por trás do alerta **caixa
+projetado negativo** do Monitor, que aponta em que data o saldo fica negativo.
+
+## Aging
+
+Distribui os lançamentos pendentes por faixa de atraso, separando **total a receber pendente** e
+**total a pagar pendente**. Responde: o quanto da carteira está velho.
+
+## Resultado (competência)
+
+Receitas e custos **pela data de ocorrência**, independentemente de terem sido pagos. Responde: o
+resultado do período.
+
+## Rentabilidade por campanha
+
+Compara receita e custos de cada campanha. Depende diretamente de os custos terem o **vínculo de
+campanha** preenchido — sem isso, a margem aparece melhor do que é.
+
+## Retenções fiscais
+
+Consolida as retenções aplicadas nos pagamentos do período.
+
+## Exportação
+
+Os relatórios podem ser exportados. No Financeiro, além da exportação em planilha, há também a versão
+em PDF com a identidade visual da agência.
+
+<Relacionados
+  links={[
+    { title: 'Fechamento de período', href: '/docs/financeiro/fechamento-de-periodo' },
+    { title: 'Custos e pagamentos', href: '/docs/financeiro/custos-e-pagamentos' },
+    { title: 'Módulo Financeiro', href: '/docs/financeiro' },
+  ]}
+/>

@@ -1,0 +1,141 @@
+---
+title: Como criar um lançamento
+description: Registre uma entrada ou uma saída, com vínculo de marca, campanha e entrega.
+keywords:
+  - lançamento
+  - criar
+  - a receber
+  - a pagar
+  - vencimento
+  - contraparte
+---
+
+O lançamento é a unidade do Financeiro: uma entrada (a receber) ou uma saída (a pagar), com valor,
+vencimento e contraparte.
+
+<Permissoes>
+Área **Financial entries** — "Permite cadastrar um lançamento financeiro".
+
+</Permissoes>
+
+<PreRequisitos>
+Pelo menos uma conta financeira ativa cadastrada. O mês do lançamento precisa estar **aberto**.
+
+</PreRequisitos>
+
+<Captura id="financeiro-novo-lancamento" />
+
+## Passo a passo
+
+<Steps>
+
+<Step>
+### Abra a tela certa
+
+**Financeiro › Contas a receber** para entradas, **Financeiro › Custos e pagamentos** para saídas.
+Clique em **Novo lançamento**.
+
+</Step>
+
+<Step>
+### Escolha o tipo
+
+**A receber** ou **A pagar**.
+
+</Step>
+
+<Step>
+### Preencha o lançamento
+
+| Campo | O que informar |
+| --- | --- |
+| **Conta** | De onde sai ou para onde entra o dinheiro |
+| **Contraparte** | Quem paga ou recebe |
+| **Valor** | O valor total |
+| **Descrição** | Como o lançamento aparece nas listas |
+| **Categoria** e **Subcategoria** | Classificação para os relatórios |
+
+</Step>
+
+<Step>
+### Informe as datas
+
+**Ocorrência** (a data do fato, usada no regime de competência) e **Vencimento** (usada no fluxo de
+caixa e no aging). Informe também a forma de pagamento, se já souber.
+
+</Step>
+
+<Step>
+### Vincule (opcional, mas recomendado)
+
+| Vínculo | Efeito |
+| --- | --- |
+| **Marca** | Necessário para emitir cobrança — o documento do pagador vem daí |
+| **Campanha** | Entra na margem e na rentabilidade da campanha |
+| **Creator (repasse)** | Identifica o lançamento como custo daquele influenciador |
+| **Entrega vinculada** | Amarra o custo a uma entrega específica |
+
+</Step>
+
+<Step>
+### Registre a nota fiscal (opcional)
+
+Use o campo **Referência (NF, boleto, etc.)** e a seção de nota fiscal.
+
+</Step>
+
+<Step>
+### Salve
+
+</Step>
+
+</Steps>
+
+<Resultado>
+O lançamento aparece na lista com status **Pendente** e passa a contar nos indicadores de a receber
+ou a pagar.
+
+</Resultado>
+
+## Status possíveis
+
+| Status | Significado |
+| --- | --- |
+| Pendente | Em aberto, ainda no prazo |
+| Vencido | Passou do vencimento sem baixa |
+| Pago | Recebido ou pago |
+| Cancelado | Encerrado sem pagamento |
+
+## Lançamentos automáticos
+
+Lançamentos criados pelo sistema (conversão de proposta, publicação de entrega) trazem o selo
+**Auto**. Ao editá-los, o formulário avisa que a edição pode dessincronizá-los da origem — prefira
+ajustar o registro de origem quando possível.
+
+## Problemas comuns
+
+<ProblemaComum titulo='"O período financeiro está fechado"'>
+A data do lançamento cai em um mês já fechado. Use uma data dentro de um mês aberto ou
+[reabra o período](/docs/financeiro/fechamento-de-periodo).
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Já existe um repasse para este creator nesta campanha"'>
+Para não dobrar o custo da campanha, o sistema impede um segundo repasse do mesmo influenciador na
+mesma campanha. Edite o lançamento existente em vez de criar outro.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"O lançamento já foi pago e não pode ser alterado"'>
+Lançamentos pagos são imutáveis. Se o valor estiver errado,
+[estorne](/docs/financeiro/estorno) e lance de novo.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Parcelamentos', href: '/docs/financeiro/parcelamentos' },
+    { title: 'Como registrar um pagamento', href: '/docs/financeiro/registrar-pagamento' },
+    { title: 'Como estornar um lançamento', href: '/docs/financeiro/estorno' },
+  ]}
+/>

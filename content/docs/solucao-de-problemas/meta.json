@@ -1,0 +1,16 @@
+{
+  "title": "Solução de problemas",
+  "icon": "LifeBuoy",
+  "pages": [
+    "index",
+    "problemas-de-acesso",
+    "permissoes-insuficientes",
+    "link-expirado",
+    "proposta-bloqueada",
+    "entregavel-bloqueado",
+    "pagamento-bloqueado",
+    "conta-padrao-nao-configurada",
+    "erro-de-conciliacao",
+    "arquivos-e-anexos"
+  ]
+}

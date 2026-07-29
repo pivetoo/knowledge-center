@@ -1,0 +1,22 @@
+{
+  "title": "Comercial",
+  "icon": "Handshake",
+  "pages": [
+    "index",
+    "funil",
+    "criar-oportunidade",
+    "mover-oportunidade",
+    "fechar-oportunidade",
+    "criar-proposta",
+    "itens-da-proposta",
+    "desconto-e-prazo",
+    "aprovacao-comercial",
+    "enviar-proposta",
+    "link-publico",
+    "aceite-do-cliente",
+    "converter-em-campanha",
+    "follow-ups",
+    "metas-e-forecast",
+    "configuracoes"
+  ]
+}

@@ -1,0 +1,95 @@
+---
+title: Como resolver problemas de acesso
+description: Login que não completa, sessão expirada e usuário sem nenhum módulo visível.
+keywords:
+  - acesso
+  - login
+  - não consigo entrar
+  - sessão
+  - senha
+  - erro
+---
+
+O login do Mainstay é centralizado: o sistema encaminha você para o serviço de identidade do
+ecossistema e depois traz de volta. Quase todo problema de acesso está em uma das três etapas dessa
+ida e volta.
+
+## A tela de login abre e volta para o login
+
+Costuma ser cookie ou cache do navegador.
+
+<Steps>
+
+<Step>
+Teste em uma janela anônima. Se funcionar, o problema é local.
+
+</Step>
+
+<Step>
+Limpe os dados do site no navegador normal (cookies e armazenamento local) e tente de novo.
+
+</Step>
+
+<Step>
+Confira se o navegador não está bloqueando cookies de terceiros para o domínio.
+
+</Step>
+
+</Steps>
+
+## Entrei, mas não vejo nenhum módulo
+
+O usuário existe, mas ainda não tem permissões. O menu do Mainstay esconde por completo os módulos a
+que você não tem acesso.
+
+Peça a quem administra a agência para vincular um perfil ao seu usuário em **Controle de Acesso**.
+Veja [perfis e permissões](/docs/primeiros-passos/perfis-e-permissoes).
+
+## Sou desconectado o tempo todo
+
+A sessão tem validade e o sistema tenta renová-la sozinho. Quando a renovação falha, você volta para
+o login.
+
+<Steps>
+
+<Step>
+Confira se você não saiu do sistema em outra aba — o logout encerra a sessão em todas.
+
+</Step>
+
+<Step>
+Verifique se o relógio do computador está correto. Diferença grande de horário invalida a sessão.
+
+</Step>
+
+<Step>
+Se persistir, limpe os dados do site e faça login novamente.
+
+</Step>
+
+</Steps>
+
+## Esqueci a senha
+
+Use a recuperação na própria tela de login. A redefinição chega por e-mail. Como o login é
+centralizado, a nova senha vale para os demais sistemas do ecossistema aos quais você tenha acesso.
+
+## Um colega entra e eu não
+
+Se ele acessa normalmente com a mesma rede e navegador, o problema é do seu usuário: senha, usuário
+inativo ou convite ainda não aceito. Peça a quem administra para conferir o cadastro em **Controle de
+Acesso**.
+
+<Callout type="warn" title="Nunca compartilhe login">
+  Se você precisa de um acesso que não tem, o caminho é ajustar o seu perfil — não usar o login de
+  outra pessoa. As ações ficam registradas com o nome de quem executou.
+
+</Callout>
+
+<Relacionados
+  links={[
+    { title: 'Como acessar o sistema', href: '/docs/primeiros-passos/como-acessar' },
+    { title: 'Permissões insuficientes', href: '/docs/solucao-de-problemas/permissoes-insuficientes' },
+    { title: 'Perfis e permissões', href: '/docs/primeiros-passos/perfis-e-permissoes' },
+  ]}
+/>

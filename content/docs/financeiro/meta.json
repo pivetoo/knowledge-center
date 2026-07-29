@@ -1,0 +1,23 @@
+{
+  "title": "Financeiro",
+  "icon": "Wallet",
+  "pages": [
+    "index",
+    "contas-financeiras",
+    "conta-padrao",
+    "criar-lancamento",
+    "parcelamentos",
+    "contas-a-receber",
+    "cobrancas",
+    "regua-de-cobranca",
+    "registrar-pagamento",
+    "custos-e-pagamentos",
+    "repasse-influenciador",
+    "nota-fiscal",
+    "conciliacao",
+    "estorno",
+    "fechamento-de-periodo",
+    "relatorios",
+    "configuracoes"
+  ]
+}

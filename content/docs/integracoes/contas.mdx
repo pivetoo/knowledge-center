@@ -1,0 +1,100 @@
+---
+title: Contas conectadas
+description: Conecte e gerencie as contas dos serviços externos usados pelo Mainstay.
+keywords:
+  - conta
+  - integração
+  - conectar
+  - categoria
+  - testar
+---
+
+**Integrações › Contas** é onde ficam as contas dos serviços externos. Cada integração pode ter uma
+ou mais contas conectadas.
+
+<Permissoes>
+Área **Integrations** — "Permite listar as integrações" e consulta das integrações ativas.
+
+</Permissoes>
+
+<Captura id="integracoes-contas" />
+
+## Como a tela é organizada
+
+<Steps>
+
+<Step>
+### Escolha a categoria
+
+A navegação começa pela categoria (e-mail, WhatsApp, cobrança, pagamento, assinatura digital). Sem
+categoria selecionada, a tela orienta: *"Selecione uma categoria para começar"*.
+
+</Step>
+
+<Step>
+### Escolha a integração
+
+A lista mostra as integrações daquela categoria e quantas contas conectadas cada uma tem.
+
+</Step>
+
+<Step>
+### Gerencie as contas
+
+Com a integração selecionada, aparecem as contas conectadas, o status de cada uma e as ações
+disponíveis.
+
+</Step>
+
+</Steps>
+
+## Ações por conta
+
+| Ação | O que faz |
+| --- | --- |
+| **Editar configurações** | Ajusta os parâmetros da conta (credenciais, endereços, opções) |
+| **Executar teste** | Dispara uma chamada de teste para conferir se a conta responde |
+| **Vincular evento** | Liga a conta a um evento do sistema |
+
+A mesma tela mostra as **automações que usam aquela integração**, o que evita desconectar uma conta
+sem perceber o que vai parar de funcionar.
+
+<Resultado>
+Contas ativas passam a ser utilizáveis nos fluxos que dependem daquela categoria — envio de proposta,
+régua de cobrança, emissão de boleto, repasse PIX, assinatura de contrato.
+
+</Resultado>
+
+<Callout type="warn" title="Campos sensíveis">
+  Senhas, tokens e chaves são tratados como campos protegidos no formulário. Ao editar uma conta,
+  reveja os campos preenchidos antes de salvar para não sobrescrever uma credencial válida.
+
+</Callout>
+
+## Contas financeiras têm vínculo próprio
+
+Vincular a integração de cobrança ou de pagamento a uma conta financeira **não** é feito aqui: é em
+**Financeiro › Contas bancárias › Integrações**. Esta tela cuida da conta do serviço; lá se decide
+qual conta bancária usa qual serviço.
+
+## Problemas comuns
+
+<ProblemaComum titulo='"Nenhuma integração nesta categoria"'>
+A categoria não tem integração cadastrada para a agência. Fale com quem administra o Mainstay na sua
+agência para habilitar a integração.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="Uma conta aparece como pausada">
+Contas pausadas não executam. O envio de proposta, por exemplo, avisa *"Canal pausado"* e oferece
+marcar a proposta como enviada manualmente. Reative a conta para voltar ao normal.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Ações disponíveis', href: '/docs/integracoes/acoes' },
+    { title: 'Logs de integração', href: '/docs/integracoes/logs' },
+    { title: 'Configurações do Financeiro', href: '/docs/financeiro/configuracoes' },
+  ]}
+/>

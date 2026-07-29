@@ -1,0 +1,60 @@
+---
+title: Configurações do Financeiro
+description: Bancos, subcategorias financeiras e as integrações de cobrança e pagamento.
+keywords:
+  - configuração
+  - bancos
+  - subcategorias
+  - integração
+  - financeiro
+---
+
+Os cadastros abaixo sustentam o Financeiro. Vale configurá-los antes do primeiro mês de operação.
+
+## Bancos
+
+**Configuração › Bancos** mantém a lista de instituições usadas nas contas financeiras. É de lá que
+vem o logo exibido na lista de contas.
+
+## Subcategorias financeiras
+
+**Configuração › Subcategorias financeiras** detalha as categorias dos lançamentos. Elas são o que
+permite abrir os relatórios além de "receita" e "custo" — por exemplo, separar produção, mídia e
+despesas administrativas.
+
+Preencher a subcategoria é opcional no lançamento, mas quanto mais consistente for o preenchimento,
+mais útil fica o resultado por competência.
+
+## Integrações da conta
+
+Não ficam em Configuração: cada conta financeira tem as suas, em **Financeiro › Contas bancárias ›
+Integrações**.
+
+| Integração | Efeito |
+| --- | --- |
+| **Cobrança** | Habilita emitir boleto e PIX e a consulta automática de pagamentos |
+| **Pagamentos** | Habilita o disparo dos repasses via PIX |
+
+Sem esses vínculos, o Financeiro continua funcionando como registro manual — o que muda é a
+automação.
+
+<Callout type="warn" title="Vínculo bancário congela com cobrança em aberto">
+  Enquanto houver cobrança em aberto (emitindo ou emitida) na conta, o banco e as integrações ficam
+  bloqueados para alteração. O boleto está vivo no banco emissor, e trocar o vínculo faria o
+  cancelamento e a baixa saírem pelo banco errado.
+
+</Callout>
+
+## Dados da agência
+
+**Configuração › Agência** guarda razão social, nome fantasia, documento, endereço e logo. Esses
+dados aparecem no PDF da proposta, nos relatórios financeiros em PDF e nos documentos gerados a
+partir de modelos.
+
+<Relacionados
+  links={[
+    { title: 'Como criar uma conta financeira', href: '/docs/financeiro/contas-financeiras' },
+    { title: 'Cobranças (boleto e PIX)', href: '/docs/financeiro/cobrancas' },
+    { title: 'Contas de integração', href: '/docs/integracoes/contas' },
+  ]}
+/>

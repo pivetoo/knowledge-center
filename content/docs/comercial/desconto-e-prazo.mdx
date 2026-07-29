@@ -1,0 +1,97 @@
+---
+title: Como configurar desconto e prazo
+description: Aplique desconto em valor ou percentual e defina o prazo de pagamento da proposta.
+keywords:
+  - desconto
+  - prazo de pagamento
+  - condições
+  - total líquido
+  - negociação
+---
+
+Desconto e prazo de pagamento são definidos **na proposta**, não em um registro separado de
+negociação. É a proposta que carrega as condições comerciais.
+
+<Permissoes>
+Área **Proposals** — "Permite atualizar os dados de uma proposta".
+
+</Permissoes>
+
+<PreRequisitos>
+A proposta precisa estar em **Rascunho** e ter pelo menos um item — sem itens não há valor bruto
+sobre o qual aplicar desconto.
+
+</PreRequisitos>
+
+## Como o desconto funciona
+
+Na seção **Desconto** do detalhe da proposta existem dois campos: **Desconto (R$)** e
+**Desconto (%)**. Eles são espelhos do mesmo número — preencher um recalcula o outro. O **Total
+líquido** é sempre calculado a partir do total bruto menos o desconto.
+
+<Steps>
+
+<Step>
+### Abra o detalhe da proposta
+
+**Comercial › Propostas**, selecione a proposta e use **Detalhes**.
+
+</Step>
+
+<Step>
+### Informe o desconto
+
+Preencha em reais ou em percentual, como preferir.
+
+</Step>
+
+<Step>
+### Salve
+
+Clique em **Salvar desconto**. Enquanto houver alteração não gravada, o sistema sinaliza
+**Alterações não salvas**.
+
+</Step>
+
+</Steps>
+
+<Resultado>
+O **Total líquido** é recalculado e passa a ser o valor que a marca vê no link público e no PDF.
+
+</Resultado>
+
+## Prazo de pagamento
+
+O **Prazo de pagamento (dias)** fica no formulário da proposta. Ele é exibido para a marca como
+"X dias" e orienta o vencimento do recebível gerado na conversão em campanha.
+
+## Observações
+
+- **Só em rascunho.** Depois do envio, os termos ficam congelados. Para renegociar, crie uma nova
+  proposta.
+- **Remoção de item.** Se você remover um item e o desconto ficar maior que o novo valor bruto, o
+  sistema avisa que o desconto será reduzido ao máximo possível e pede confirmação.
+- **Rateio na conversão.** O desconto não fica "solto": ao converter a proposta em campanha, ele é
+  distribuído entre os influenciadores na proporção da participação de cada um no valor bruto. Assim
+  a soma dos valores acordados fecha exatamente com o orçamento da campanha.
+
+## Problemas comuns
+
+<ProblemaComum titulo='"Adicione itens à proposta para aplicar um desconto"'>
+A proposta ainda não tem itens. Cadastre pelo menos um item e o campo de desconto é liberado.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Esta proposta já foi enviada e não pode mais ser alterada"'>
+Comportamento esperado: o que a marca viu é o que vale. Crie uma nova proposta com as condições
+revistas.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Itens da proposta', href: '/docs/comercial/itens-da-proposta' },
+    { title: 'Como funciona a aprovação comercial', href: '/docs/comercial/aprovacao-comercial' },
+    { title: 'Como converter uma proposta em campanha', href: '/docs/comercial/converter-em-campanha' },
+  ]}
+/>

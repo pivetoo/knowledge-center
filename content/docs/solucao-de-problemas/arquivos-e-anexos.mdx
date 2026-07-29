@@ -1,0 +1,88 @@
+---
+title: Problemas com arquivos e anexos
+description: Tipos aceitos, upload, URLs externas e o que fazer quando o anexo não sobe.
+keywords:
+  - arquivo
+  - anexo
+  - upload
+  - imagem
+  - pdf
+  - url
+---
+
+O Mainstay recebe arquivos em vários pontos: conteúdo em revisão, nota fiscal, documentos da campanha
+e logo da agência. As regras mudam conforme o lugar.
+
+## Onde cada tipo é aceito
+
+| Onde | Upload | Link externo |
+| --- | --- | --- |
+| Revisão de conteúdo | Imagem | Sim — para vídeo e outros arquivos |
+| Nota fiscal do repasse | Sim (PDF) | Sim, se for um endereço http(s) |
+| Documentos da campanha | Sim | Sim (URL do documento) |
+| Foto do influenciador / logo da agência | Imagem | Não |
+
+## Problemas mais comuns
+
+<ProblemaComum titulo='"Tipo de arquivo não suportado. Envie uma imagem."'>
+O upload da revisão de conteúdo aceita imagem. Para vídeo, use o campo **Link externo (vídeo/arquivo)**
+com um endereço público (drive, WeTransfer, plataforma de vídeo).
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"A URL da nota fiscal deve ser um link http(s) válido"'>
+O campo aceita apenas endereços começando com `http://` ou `https://`. Se você quer enviar o arquivo
+em si, use o upload — é ele que armazena o documento com segurança no sistema.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="O arquivo sobe mas o link quebra depois">
+Links externos dependem do serviço de origem. Se o arquivo for removido ou o compartilhamento
+expirar, o link para de funcionar. Para material que precisa durar (contrato, nota fiscal), prefira o
+upload.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="O anexo não aparece para a marca ou para o influenciador">
+Confira em que aba o arquivo foi anexado. Comentários **internos** da revisão de conteúdo são
+visíveis apenas para a agência — se o material precisa ser visto por fora, use os comentários
+compartilhados ou a rodada enviada para a marca.
+
+</ProblemaComum>
+
+## Boas práticas
+
+<Steps>
+
+<Step>
+**Nomeie bem.** O nome do arquivo é o que a equipe vai ver na lista depois.
+
+</Step>
+
+<Step>
+**Prefira upload para documentos definitivos.** Contratos e notas fiscais precisam sobreviver ao
+serviço de origem do link.
+
+</Step>
+
+<Step>
+**Use links para material pesado.** Vídeos brutos e pastas de campanha funcionam melhor como link
+externo.
+
+</Step>
+
+</Steps>
+
+<Callout type="warn" title="Não cole endereços internos do sistema">
+  Campos de URL esperam endereços públicos. Colar um caminho interno de armazenamento não funciona —
+  esses caminhos são gerados pelo próprio sistema no upload, com assinatura de segurança.
+
+</Callout>
+
+<Relacionados
+  links={[
+    { title: 'Enviar conteúdo para aprovação', href: '/docs/producao/enviar-conteudo-para-aprovacao' },
+    { title: 'Nota fiscal', href: '/docs/financeiro/nota-fiscal' },
+    { title: 'Documentos e contratos', href: '/docs/producao/documentos-e-contratos' },
+  ]}
+/>

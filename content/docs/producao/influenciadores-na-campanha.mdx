@@ -1,0 +1,109 @@
+---
+title: Como adicionar influenciadores à campanha
+description: Monte o casting da campanha com valor combinado, fee da agência e status de participação.
+keywords:
+  - influenciador
+  - creator
+  - casting
+  - campanha
+  - valor combinado
+  - fee
+---
+
+O casting define quem produz o conteúdo da campanha e quanto cada um recebe. Ele pode chegar pronto
+pela conversão da proposta ou ser montado manualmente.
+
+<Permissoes>
+Áreas **Campaigns** e **Creators** — cadastro de influenciadores na campanha e consulta da base de
+influenciadores.
+
+</Permissoes>
+
+<PreRequisitos>
+O influenciador precisa estar cadastrado em **Produção › Influenciadores**.
+
+</PreRequisitos>
+
+<Captura id="producao-influenciadores" />
+
+## Passo a passo
+
+<Steps>
+
+<Step>
+### Abra a campanha
+
+**Produção › Campanhas › Detalhes**, aba **Influenciadores**.
+
+</Step>
+
+<Step>
+### Adicione
+
+Clique em **Adicionar influenciador**.
+
+</Step>
+
+<Step>
+### Informe os valores
+
+| Campo | O que significa |
+| --- | --- |
+| **Valor combinado** | O quanto foi acordado com o influenciador |
+| **Fee da agência (%)** | O percentual que fica com a agência |
+| **Fee calculado** | Calculado automaticamente a partir dos dois campos acima |
+
+</Step>
+
+<Step>
+### Salve
+
+</Step>
+
+</Steps>
+
+<Resultado>
+O influenciador entra na lista **Influenciadores da campanha** com o status inicial configurado, e o
+**Custo previsto** da campanha é atualizado.
+
+</Resultado>
+
+## Quando vem da conversão da proposta
+
+Na [conversão](/docs/comercial/converter-em-campanha), os influenciadores dos itens da proposta já
+entram no casting com seus valores. Se houve desconto na proposta, ele é rateado entre eles na
+proporção da participação de cada um — por isso os valores podem não bater exatamente com o que
+estava na proposta linha a linha, mas a soma fecha com o orçamento da campanha.
+
+## Status do influenciador na campanha
+
+Os status são configuráveis em **Configuração › Status do influenciador** e servem para acompanhar a
+negociação individual (convidado, confirmado, cancelado). Um status precisa estar marcado como
+inicial: é ele que todo influenciador recebe ao entrar na campanha.
+
+## Custo previsto × repasse real
+
+O casting alimenta o **Custo previsto** da campanha. O repasse de verdade só é criado quando a
+entrega é [publicada](/docs/producao/publicar-entregavel), com o valor real daquela entrega.
+
+## Problemas comuns
+
+<ProblemaComum titulo='"Nenhum status inicial configurado"'>
+A agência não tem um status de influenciador marcado como inicial. Configure em **Configuração ›
+Status do influenciador**.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="A campanha mostra orçamento estourado">
+A soma dos valores combinados passou do budget da campanha. Ajuste os valores ou revise o budget em
+**Editar campanha**.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Como criar um entregável', href: '/docs/producao/criar-entregavel' },
+    { title: 'Portal do influenciador', href: '/docs/producao/portal-do-influenciador' },
+    { title: 'Repasse a influenciador', href: '/docs/financeiro/repasse-influenciador' },
+  ]}
+/>

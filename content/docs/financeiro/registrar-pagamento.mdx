@@ -1,0 +1,112 @@
+---
+title: Como registrar um pagamento
+description: Dê baixa em um lançamento recebido ou pago, individualmente ou em lote.
+keywords:
+  - pagamento
+  - baixa
+  - marcar como pago
+  - recebimento
+  - quitar
+  - parcial
+---
+
+Registrar o pagamento é dar baixa no lançamento. É essa ação que tira o valor de "em aberto" e o
+coloca no fluxo de caixa realizado.
+
+<Permissoes>
+Área **Financial entries** — "Permite marcar um lançamento financeiro como pago/recebido".
+
+</Permissoes>
+
+<PreRequisitos>
+O lançamento precisa estar em aberto (pendente ou vencido) e o mês da data de pagamento precisa estar
+**aberto**.
+
+</PreRequisitos>
+
+## Passo a passo
+
+<Steps>
+
+<Step>
+### Selecione o lançamento
+
+Em **Contas a receber** ou **Custos e pagamentos**, selecione a linha.
+
+</Step>
+
+<Step>
+### Abra a confirmação
+
+A janela é **Confirmar recebimento** para entradas e **Confirmar pagamento** para saídas.
+
+</Step>
+
+<Step>
+### Informe os dados da baixa
+
+| Campo | O que informar |
+| --- | --- |
+| **Data** | Quando o dinheiro efetivamente entrou ou saiu |
+| **Forma** | PIX, boleto, transferência, cartão |
+| **Conta de destino** | Em qual conta o valor caiu |
+| **Valor** | Deixe em branco para quitar o saldo total |
+
+</Step>
+
+<Step>
+### Confirme
+
+</Step>
+
+</Steps>
+
+<Resultado>
+O lançamento passa para **Pago** e entra no total **Recebido no mês** (ou **Pago no mês**). O
+indicador de "a receber" ou "a pagar" é reduzido no mesmo valor.
+
+</Resultado>
+
+## Recebimento parcial
+
+Informar um valor **menor que o saldo em aberto** registra um recebimento parcial: o lançamento
+continua aberto pelo saldo restante. Só a quitação total dispara os efeitos de liquidação, como a
+notificação de recebimento.
+
+## Baixa em lote
+
+Selecione várias linhas e use a baixa em lote, informando data e forma de pagamento uma vez só. A
+baixa é feita na própria conta de cada lançamento. Ao final, o sistema informa quantos foram
+processados e quantos deram erro.
+
+## Baixa automática
+
+Recebíveis com cobrança emitida podem ser baixados sozinhos quando o banco confirma o pagamento —
+veja [conciliação](/docs/financeiro/conciliacao). Nesse caso você não precisa marcar nada
+manualmente.
+
+## Problemas comuns
+
+<ProblemaComum titulo='"O período financeiro está fechado"'>
+A data da baixa cai em um mês fechado. Use uma data dentro de um mês aberto ou
+[reabra o período](/docs/financeiro/fechamento-de-periodo).
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"O lançamento já foi pago e não pode ser alterado"'>
+Para corrigir um pagamento registrado errado, use o [estorno](/docs/financeiro/estorno).
+
+</ProblemaComum>
+
+<ProblemaComum titulo="Marquei como pago mas o valor continua aparecendo em aberto">
+Foi um recebimento parcial. Confira o saldo restante do lançamento e complete a baixa.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Como estornar um lançamento', href: '/docs/financeiro/estorno' },
+    { title: 'Conciliação de pagamentos', href: '/docs/financeiro/conciliacao' },
+    { title: 'Fechamento de período', href: '/docs/financeiro/fechamento-de-periodo' },
+  ]}
+/>

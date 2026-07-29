@@ -1,0 +1,80 @@
+---
+title: Como definir a conta padrão
+description: Escolha a conta financeira usada por padrão nos lançamentos da agência.
+keywords:
+  - conta padrão
+  - padrão
+  - definir
+  - conta financeira
+---
+
+A conta padrão é a que o sistema sugere primeiro nos lançamentos. Ter uma definida evita que a equipe
+escolha a conta errada na correria.
+
+<Permissoes>
+Área **Financial accounts** — "Permite definir a conta financeira padrão".
+
+</Permissoes>
+
+<PreRequisitos>
+A conta precisa estar **ativa**. Contas inativas não podem ser definidas como padrão.
+
+</PreRequisitos>
+
+<Captura id="financeiro-contas" />
+
+## Passo a passo
+
+<Steps>
+
+<Step>
+Abra **Financeiro › Contas bancárias**.
+
+</Step>
+
+<Step>
+Selecione a conta desejada na lista.
+
+</Step>
+
+<Step>
+Clique em **Definir como padrão**.
+
+</Step>
+
+</Steps>
+
+<Resultado>
+A conta passa a exibir o selo **Padrão**. Só existe uma conta padrão por vez: ao definir outra, a
+anterior perde o selo automaticamente.
+
+</Resultado>
+
+## Por que isso importa
+
+- É a conta sugerida nos formulários de lançamento.
+- A **conversão de proposta em campanha** exige pelo menos uma conta financeira ativa cadastrada —
+  sem isso não há onde lançar o recebível da marca.
+- É de uma conta que saem as integrações de cobrança e de pagamento. A conta escolhida no lançamento
+  determina qual banco emite o boleto e qual executa o PIX.
+
+## Problemas comuns
+
+<ProblemaComum titulo='"Não é possível definir uma conta inativa como padrão"'>
+Reative a conta em **Editar conta** e então defina como padrão.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="Nenhuma conta aparece como padrão">
+Provavelmente nunca foi definida. Veja
+[conta padrão não configurada](/docs/solucao-de-problemas/conta-padrao-nao-configurada).
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Como criar uma conta financeira', href: '/docs/financeiro/contas-financeiras' },
+    { title: 'Como criar um lançamento', href: '/docs/financeiro/criar-lancamento' },
+    { title: 'Conta padrão não configurada', href: '/docs/solucao-de-problemas/conta-padrao-nao-configurada' },
+  ]}
+/>

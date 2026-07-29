@@ -1,0 +1,15 @@
+{
+  "title": "Central de Ajuda",
+  "root": true,
+  "pages": [
+    "index",
+    "primeiros-passos",
+    "comercial",
+    "producao",
+    "financeiro",
+    "portais-publicos",
+    "integracoes",
+    "solucao-de-problemas",
+    "faq"
+  ]
+}

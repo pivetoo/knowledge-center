@@ -1,0 +1,21 @@
+{
+  "title": "Produção",
+  "icon": "Megaphone",
+  "pages": [
+    "index",
+    "criar-campanha",
+    "influenciadores-na-campanha",
+    "briefing",
+    "criar-entregavel",
+    "enviar-conteudo-para-aprovacao",
+    "aprovar-ou-solicitar-alteracoes",
+    "publicar-entregavel",
+    "metricas",
+    "documentos-e-contratos",
+    "licencas",
+    "calendario",
+    "portal-do-influenciador",
+    "relatorio-da-campanha",
+    "configuracoes"
+  ]
+}

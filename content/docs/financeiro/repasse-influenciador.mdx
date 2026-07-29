@@ -1,0 +1,129 @@
+---
+title: Como realizar um repasse a influenciador
+description: Pague influenciadores individualmente ou em lote via PIX, com nota fiscal e comprovante.
+keywords:
+  - repasse
+  - pagamento
+  - influenciador
+  - pix
+  - lote
+  - pay-when-paid
+---
+
+O repasse é o pagamento ao influenciador pela entrega publicada. Ele pode ser marcado como pago
+manualmente ou disparado via PIX pela integração de pagamentos da conta.
+
+<Permissoes>
+Área **Creator payments** — "Permite registrar um pagamento a creator", "Permite agendar um lote de
+pagamentos via gateway" e "Permite marcar um pagamento como pago".
+
+</Permissoes>
+
+<PreRequisitos>
+A entrega precisa estar publicada. Para o PIX automático, o influenciador precisa ter **chave PIX
+cadastrada** e a conta precisa ter a integração de **Pagamentos** vinculada.
+
+</PreRequisitos>
+
+<Captura id="financeiro-repasses" />
+
+## A tela
+
+**Financeiro › Repasses para influenciadores** lista os pagamentos com influenciador, campanha,
+valor líquido, método, data prevista e status. Os indicadores mostram total bruto, total líquido,
+quantidade de pagamentos e o total dos selecionados.
+
+## Pagar em lote via PIX
+
+<Steps>
+
+<Step>
+### Selecione os repasses
+
+Marque as linhas que serão pagas. O botão mostra a quantidade: **Agendar lote (N)**.
+
+</Step>
+
+<Step>
+### Defina a data
+
+Informe a data prevista de pagamento ou deixe em branco para disparar imediatamente.
+
+</Step>
+
+<Step>
+### Envie
+
+Confirme com **Enviar N pagamento(s)**.
+
+</Step>
+
+<Step>
+### Acompanhe
+
+O status caminha por **Agendado** até **Pago** ou **Falhou**. A **Fila de repasses**, no Monitor
+financeiro, mostra o funil: aprovado para pagar, agendado, falhou.
+
+</Step>
+
+</Steps>
+
+<Resultado>
+Os repasses saem pela conta bancária vinculada, com PIX executado pela integração de pagamentos. A
+baixa do custo é registrada automaticamente quando o pagamento é confirmado.
+
+</Resultado>
+
+## Marcar como pago manualmente
+
+Quando o pagamento foi feito por fora do sistema, use **Marcar pago** e informe data e hora do
+pagamento, método e, opcionalmente, o ID da transação.
+
+## Pay-when-paid
+
+Se a campanha tiver a regra **Só liberar o repasse ao influenciador após o conteúdo aprovado**, o
+agendamento só acontece quando **todas** as entregas daquele influenciador na campanha estiverem
+aprovadas. Influenciadores sem entregas na campanha não são bloqueados por essa regra.
+
+## Nota fiscal
+
+Use **Anexar NF** para registrar número, data de emissão e o arquivo. O influenciador também pode
+anexar a nota pelo próprio [portal](/docs/producao/portal-do-influenciador). Repasses sem nota ficam
+marcados com o selo **Sem NF**.
+
+## Detalhes e histórico
+
+**Ver detalhes** abre as abas **Dados**, **Nota fiscal** e **Histórico**, com os eventos registrados
+do pagamento — útil para investigar uma falha ou comprovar uma execução.
+
+## Problemas comuns
+
+<ProblemaComum titulo='"O conteúdo do entregável ainda não foi aprovado"'>
+A campanha usa pay-when-paid e há entregas pendentes de aprovação. Conclua as aprovações ou desmarque
+a regra no cadastro da campanha.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Conta bancária do repasse sem conector de repasse configurado"'>
+Vincule a integração de **Pagamentos** à conta em **Financeiro › Contas bancárias › Integrações**.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Não é possível marcar como pago um pagamento cancelado"'>
+Pagamentos cancelados são finais. Crie um novo pagamento para o influenciador.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="Um repasse ficou em Falhou">
+Abra o histórico do pagamento e os logs de integração para ver o motivo. Reenviar reaproveita a mesma
+chave de idempotência, o que evita o risco de o PIX sair duas vezes.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Nota fiscal do repasse', href: '/docs/financeiro/nota-fiscal' },
+    { title: 'Como publicar um entregável', href: '/docs/producao/publicar-entregavel' },
+    { title: 'Por que um pagamento pode ficar bloqueado', href: '/docs/solucao-de-problemas/pagamento-bloqueado' },
+  ]}
+/>

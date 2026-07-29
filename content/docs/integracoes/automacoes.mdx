@@ -1,0 +1,106 @@
+---
+title: Automações
+description: Conecte eventos do Mainstay a ações de integrações externas.
+keywords:
+  - automação
+  - gatilho
+  - evento
+  - regra
+  - notificação
+---
+
+Uma automação é uma regra do tipo **"quando acontecer X, faça Y"**: ela liga um evento do Mainstay a
+uma ação de uma integração externa.
+
+<Permissoes>
+Área **Automations** — "Permite listar as automações" e cadastro de novas regras.
+
+</Permissoes>
+
+<PreRequisitos>
+A ação que você quer disparar precisa estar disponível em
+[Ações disponíveis](/docs/integracoes/acoes), com uma conta ativa associada.
+
+</PreRequisitos>
+
+## Passo a passo
+
+<Steps>
+
+<Step>
+Abra **Integrações › Automações** e crie uma nova automação.
+
+</Step>
+
+<Step>
+Escolha o **gatilho** — o evento do sistema que dispara a regra.
+
+</Step>
+
+<Step>
+Escolha a **ação** — a operação da integração que será executada.
+
+</Step>
+
+<Step>
+Salve e ative.
+
+</Step>
+
+</Steps>
+
+<Resultado>
+A partir daí, cada ocorrência do evento dispara a ação. As execuções ficam registradas em
+[Logs de integração](/docs/integracoes/logs).
+
+</Resultado>
+
+## Gatilhos disponíveis
+
+### Comercial
+
+| Gatilho | Quando dispara |
+| --- | --- |
+| Proposta enviada | Uma proposta é enviada à marca |
+| Proposta aprovada | A proposta é aprovada (inclusive pelo aceite no link público) |
+| Proposta rejeitada | A proposta é rejeitada |
+| Proposta convertida em campanha | A conversão é concluída |
+| Oportunidade mudou de estágio | Qualquer movimentação no funil |
+| Follow-up atrasado | Um follow-up passa da data combinada |
+
+### Produção
+
+| Gatilho | Quando dispara |
+| --- | --- |
+| Campanha criada | Uma nova campanha é cadastrada |
+| Entrega publicada | Uma entrega é marcada como publicada |
+| Entrega aprovada pela marca | A marca aprova pelo link público |
+| Entrega rejeitada pela marca | A marca rejeita pelo link público |
+
+### Financeiro
+
+| Gatilho | Quando dispara |
+| --- | --- |
+| Conta recebida | Um recebível é quitado |
+| Conta a pagar criada | Uma saída é cadastrada |
+| Conta paga | Uma saída é quitada |
+| Lançamento financeiro vencido | Um lançamento passa do vencimento |
+
+<Callout title="A decisão do cliente também conta">
+  Os gatilhos de proposta aprovada e rejeitada disparam tanto quando um usuário interno registra a
+  decisão quanto quando a marca decide pelo link público.
+
+</Callout>
+
+## Antes de desconectar uma conta
+
+Em **Integrações › Contas**, a integração selecionada mostra as **automações que a usam**. Confira
+essa lista antes de desativar uma conta — é o que evita silenciar uma automação sem perceber.
+
+<Relacionados
+  links={[
+    { title: 'Ações disponíveis', href: '/docs/integracoes/acoes' },
+    { title: 'Logs de integração', href: '/docs/integracoes/logs' },
+    { title: 'Contas conectadas', href: '/docs/integracoes/contas' },
+  ]}
+/>

@@ -1,0 +1,120 @@
+---
+title: Como enviar uma proposta ao cliente
+description: Envie a proposta por e-mail ou WhatsApp, com link público e registro do que foi enviado.
+keywords:
+  - enviar
+  - proposta
+  - e-mail
+  - whatsapp
+  - envio
+  - link
+---
+
+O envio faz três coisas de uma vez: garante o link público, dispara a mensagem pelo canal escolhido e
+congela a versão da proposta que a marca vai ver.
+
+<Permissoes>
+Área **Proposals** — "Permite enviar uma proposta para a marca".
+
+</Permissoes>
+
+<PreRequisitos>
+A proposta precisa ter **pelo menos um item** e uma **validade ainda em aberto**. É recomendável ter
+uma Conta de Integração ativa para o canal desejado (e-mail ou WhatsApp).
+
+</PreRequisitos>
+
+## Passo a passo
+
+<Steps>
+
+<Step>
+### Abra a proposta
+
+**Comercial › Propostas**, selecione e use **Detalhes**. Na lista, a ação equivalente é **Revisar e
+enviar**.
+
+</Step>
+
+<Step>
+### Clique em Enviar
+
+A janela **Enviar proposta** mostra o canal disponível e o estado da conta de integração:
+**Pronto**, **Pausado** ou **Não configurado**.
+
+</Step>
+
+<Step>
+### Escolha o canal
+
+**E-mail** ou **WhatsApp**. Para e-mail, confira destinatário e assunto; para WhatsApp, o telefone do
+destinatário.
+
+</Step>
+
+<Step>
+### Revise a mensagem
+
+O sistema sugere um texto com o nome da proposta e o nome da agência. Você pode editar. A mensagem
+pode incluir o link público da proposta.
+
+</Step>
+
+<Step>
+### Envie
+
+**Enviar email** ou **Enviar WhatsApp**.
+
+</Step>
+
+</Steps>
+
+<Resultado>
+A proposta passa para **Enviada**, uma nova versão é registrada em **Versões enviadas** e o envio
+aparece no histórico de **Envios**, com status (Na fila, Entregue, Não entregue ou Falhou).
+
+</Resultado>
+
+## A ordem importa
+
+O sistema garante o link público, enfileira o envio e **só então** marca a proposta como enviada. Se
+o disparo falhar, a proposta permanece no status anterior e a falha fica registrada no histórico com
+o motivo — em vez de aparecer como enviada sem o cliente ter recebido nada.
+
+## Quando o canal não está configurado
+
+Se o canal não tiver Conta de Integração ativa, o sistema avisa na hora do envio e oferece **Marcar
+como enviada mesmo assim** — útil para quem mandou a proposta por fora do sistema e quer manter o
+registro correto. Para configurar o canal, vá em **Integrações › Ações**.
+
+## Reenvio
+
+**Reenviar** dispara uma nova mensagem e gera uma nova versão. Cada envio cria uma versão nova, e o
+link público sempre aponta para a versão mais recente.
+
+## Problemas comuns
+
+<ProblemaComum titulo='"Adicione ao menos um item antes de enviar a proposta"'>
+Uma proposta sem itens geraria um link em branco. Cadastre os itens e tente de novo.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"A validade desta proposta já venceu. Estenda a validade antes de enviar."'>
+Um link com validade vencida devolve erro no primeiro clique do cliente. Atualize a validade da
+proposta e reenvie.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="Enviei e o status continuou o mesmo">
+O envio falhou. Abra a aba de compartilhamento e veja o histórico de **Envios**: o motivo da falha
+está registrado ali. Confira também **Integrações › Logs**.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Link público da proposta', href: '/docs/comercial/link-publico' },
+    { title: 'Como funciona o aceite público', href: '/docs/comercial/aceite-do-cliente' },
+    { title: 'Contas de integração', href: '/docs/integracoes/contas' },
+  ]}
+/>

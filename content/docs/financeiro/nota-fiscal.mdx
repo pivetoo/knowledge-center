@@ -1,0 +1,89 @@
+---
+title: Nota fiscal
+description: Registre a nota fiscal dos repasses e dos lançamentos financeiros.
+keywords:
+  - nota fiscal
+  - nf
+  - anexar
+  - documento
+  - comprovante
+---
+
+A nota fiscal aparece em dois lugares no Mainstay: no repasse ao influenciador e no lançamento
+financeiro.
+
+## Nota fiscal do repasse
+
+<Permissoes>
+Área **Creator payments** — "Permite anexar nota fiscal a um pagamento".
+
+</Permissoes>
+
+<Steps>
+
+<Step>
+Abra **Financeiro › Repasses para influenciadores** e selecione o repasse.
+
+</Step>
+
+<Step>
+Use **Anexar NF**.
+
+</Step>
+
+<Step>
+Informe o **Número da NF**, a **Data de emissão** e o arquivo — por upload ou pela URL do PDF.
+
+</Step>
+
+<Step>
+Salve.
+
+</Step>
+
+</Steps>
+
+<Resultado>
+O selo **Sem NF** sai da linha e a nota fica disponível na aba **Nota fiscal** dos detalhes do
+pagamento.
+
+</Resultado>
+
+## Envio pelo influenciador
+
+O influenciador pode anexar a nota sozinho, pela aba **Pagamentos** do
+[portal](/docs/producao/portal-do-influenciador). A tela inicial do portal já destaca essa pendência
+para ele.
+
+<Callout type="warn" title="URL precisa ser um link http(s) válido">
+  O campo de URL aceita apenas endereços http ou https. Para enviar um arquivo, use o upload — é ele
+  que armazena o documento com segurança no sistema.
+
+</Callout>
+
+## Nota fiscal no lançamento
+
+No formulário de lançamento existe a seção **Nota fiscal** e o campo **Referência (NF, boleto,
+etc.)**. Use-os para amarrar o lançamento ao documento fiscal correspondente — a referência também
+entra na busca da lista.
+
+## Problemas comuns
+
+<ProblemaComum titulo='"A URL da nota fiscal deve ser um link http(s) válido"'>
+O endereço informado não é um link válido. Cole a URL completa começando com `https://` ou use o
+upload do arquivo.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="Preciso trocar a nota de um repasse já pago">
+Anexar a nota não depende do status do pagamento — o repasse já pago continua aceitando o anexo.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Repasse a influenciador', href: '/docs/financeiro/repasse-influenciador' },
+    { title: 'Portal do influenciador', href: '/docs/producao/portal-do-influenciador' },
+    { title: 'Problemas com arquivos e anexos', href: '/docs/solucao-de-problemas/arquivos-e-anexos' },
+  ]}
+/>

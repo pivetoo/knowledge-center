@@ -1,0 +1,91 @@
+---
+title: Logs de integração
+description: Consulte o histórico de execuções das integrações para investigar falhas.
+keywords:
+  - log
+  - execução
+  - falha
+  - erro
+  - histórico
+  - diagnóstico
+---
+
+**Integrações › Logs** mostra o histórico de execuções das integrações. É o primeiro lugar a olhar
+quando um envio, uma cobrança ou um repasse não saiu como esperado.
+
+<Permissoes>
+Área **Integrations** — "Permite listar as integrações".
+
+</Permissoes>
+
+## O que a lista mostra
+
+| Coluna | Conteúdo |
+| --- | --- |
+| Tipo | **Pipeline**, **Manual** ou **Webhook** |
+| Conector | Qual conta executou |
+| Integração | A que integração o conector pertence |
+| Status | Resultado da execução |
+| Duração | Quanto tempo levou |
+| Data | Quando aconteceu |
+
+Clicar em uma linha (ou usar **Detalhes**) abre a execução com os dados completos. Quando não há
+nada registrado, a tela mostra **"Nenhuma execução registrada."**
+
+## Como investigar uma falha
+
+<Steps>
+
+<Step>
+### Localize a execução
+
+Filtre pelo período em que o problema aconteceu e procure a linha do conector correspondente.
+
+</Step>
+
+<Step>
+### Abra os detalhes
+
+Veja a mensagem retornada pelo serviço externo — é ela que diz se o problema foi credencial, dado
+inválido ou indisponibilidade.
+
+</Step>
+
+<Step>
+### Corrija na origem
+
+Credencial vencida se resolve em [Contas conectadas](/docs/integracoes/contas); dado inválido, no
+registro que originou a chamada (marca sem documento, influenciador sem chave PIX).
+
+</Step>
+
+<Step>
+### Reexecute
+
+Emissões de cobrança que falharam têm a ação **Reprocessar integração** na lista de recebíveis.
+
+</Step>
+
+</Steps>
+
+## Atalhos por contexto
+
+Alguns fluxos trazem o log direto no lugar em que o problema aparece:
+
+- o **Monitor financeiro** tem **Logs de Integração** entre as ações;
+- a lista de recebíveis mostra a falha da cobrança na própria linha;
+- os detalhes do repasse trazem a aba **Histórico** com os eventos daquele pagamento.
+
+<Callout title="Falha não some sozinha">
+  Falhas de envio de proposta ficam registradas no histórico de envios da própria proposta, com o
+  motivo — mesmo que o log de integração já tenha rolado para trás.
+
+</Callout>
+
+<Relacionados
+  links={[
+    { title: 'Contas conectadas', href: '/docs/integracoes/contas' },
+    { title: 'Cobranças (boleto e PIX)', href: '/docs/financeiro/cobrancas' },
+    { title: 'Como enviar uma proposta ao cliente', href: '/docs/comercial/enviar-proposta' },
+  ]}
+/>

@@ -1,0 +1,13 @@
+{
+  "title": "Portais e links públicos",
+  "icon": "Globe",
+  "pages": [
+    "index",
+    "proposta-publica",
+    "aceite-e-recusa",
+    "portal-do-influenciador",
+    "aprovacao-de-entregavel",
+    "relatorio-de-campanha",
+    "validade-e-revogacao"
+  ]
+}

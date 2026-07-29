@@ -1,0 +1,77 @@
+---
+title: Contas a receber
+description: Acompanhe as entradas da agência, filtre por período e trabalhe em lote.
+keywords:
+  - contas a receber
+  - recebível
+  - entrada
+  - vencido
+  - cobrança
+  - lista
+---
+
+**Financeiro › Contas a receber** concentra os lançamentos de entrada da agência: o recebível da
+marca, bônus e ajustes.
+
+<Permissoes>
+Área **Financial entries** — "Permite listar os lançamentos financeiros cadastrados" e "Permite
+consultar o resumo financeiro por tipo".
+
+</Permissoes>
+
+<Captura id="financeiro-receber" />
+
+## Indicadores do topo
+
+| Indicador | O que mostra |
+| --- | --- |
+| A receber | Total em aberto |
+| Vencido | O que passou do vencimento |
+| A receber em 7d | O que vence na próxima semana |
+| Recebido no mês | O que já entrou no mês corrente |
+
+Os indicadores respeitam os filtros de marca, campanha, conta, categoria e busca. Filtros de status,
+cobrança e intervalo de vencimento não afetam os indicadores de propósito — eles já são a quebra por
+status e por tempo.
+
+## Filtros e busca
+
+Filtre por conta, marca, campanha, categoria, status e faixa de vencimento. A busca cobre descrição,
+contraparte e referência. O total do filtro atual aparece junto do total geral.
+
+## Ações em lote
+
+Selecione várias linhas para:
+
+- **Marcar como pago** em lote;
+- **Emitir cobrança** em lote;
+- **Agendar lote** de emissão para uma data futura.
+
+O resultado do lote informa quantos foram processados com sucesso e quantos deram erro — a falha de
+um item não impede os demais.
+
+## Selos das linhas
+
+| Selo | Significado |
+| --- | --- |
+| **Auto** | Gerado automaticamente a partir de proposta ou entrega |
+| **Vencidos** | Passou do vencimento |
+| **Estornado** | O lançamento foi estornado |
+
+## Exportação
+
+A lista pode ser exportada respeitando os filtros aplicados.
+
+<Callout title="Custos e pagamentos usa a mesma tela">
+  **Financeiro › Custos e pagamentos** é a mesma lista, com o tipo invertido para saídas. Tudo o que
+  vale aqui vale lá. Veja [custos e pagamentos](/docs/financeiro/custos-e-pagamentos).
+
+</Callout>
+
+<Relacionados
+  links={[
+    { title: 'Cobranças (boleto e PIX)', href: '/docs/financeiro/cobrancas' },
+    { title: 'Como registrar um pagamento', href: '/docs/financeiro/registrar-pagamento' },
+    { title: 'Régua de cobrança', href: '/docs/financeiro/regua-de-cobranca' },
+  ]}
+/>

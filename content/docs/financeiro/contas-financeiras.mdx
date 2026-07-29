@@ -1,0 +1,112 @@
+---
+title: Como criar uma conta financeira
+description: Cadastre caixa, contas bancárias e cartões usados nos lançamentos da agência.
+keywords:
+  - conta financeira
+  - conta bancária
+  - banco
+  - caixa
+  - cartão
+  - cadastrar
+---
+
+A conta financeira representa de onde o dinheiro sai e para onde ele entra. Todo lançamento está
+vinculado a uma conta, e é na conta que ficam as integrações de cobrança e de pagamento.
+
+<Permissoes>
+Área **Financial accounts** — "Permite cadastrar uma nova conta financeira".
+
+</Permissoes>
+
+<Captura id="financeiro-contas" />
+
+## Passo a passo
+
+<Steps>
+
+<Step>
+### Abra a tela
+
+**Financeiro › Contas bancárias** e clique em **Nova conta**.
+
+</Step>
+
+<Step>
+### Nomeie a conta
+
+Use um nome que a equipe reconheça (**Itaú**, **Santander**, **Caixa da agência**). O nome não pode
+se repetir.
+
+</Step>
+
+<Step>
+### Escolha o tipo
+
+O tipo separa caixa, conta bancária e cartão nos relatórios.
+
+</Step>
+
+<Step>
+### Informe os dados bancários
+
+**Banco**, **Agência** e **Conta**. O banco vem do cadastro de bancos e traz o logo para a lista.
+Contas de caixa podem ficar sem banco.
+
+</Step>
+
+<Step>
+### Salve
+
+</Step>
+
+</Steps>
+
+<Resultado>
+A conta aparece na lista e passa a ser selecionável nos lançamentos. Os indicadores do topo mostram
+**Contas ativas**, **Sincronizadas** e **Saldo Mainstay total**.
+
+</Resultado>
+
+## Integrações da conta
+
+Cada conta pode ter duas integrações independentes, configuradas em **Integrações** na própria conta:
+
+| Integração | Para que serve |
+| --- | --- |
+| **Cobrança** | Quem emite os boletos e PIX dessa conta |
+| **Pagamentos** | Quem executa os repasses (PIX) dessa conta |
+
+Sem a integração de cobrança vinculada, a conta não emite boleto nem PIX. Sem a de pagamentos, os
+repasses dessa conta não são disparados pelo gateway.
+
+## Inativar em vez de excluir
+
+Contas com lançamentos vinculados não podem ser excluídas — o sistema orienta a inativá-las. Uma
+conta inativa some das novas seleções e continua nos registros antigos.
+
+## Problemas comuns
+
+<ProblemaComum titulo='"Já existe uma conta com esse nome"'>
+Nomes de conta são únicos. Diferencie (por exemplo: "Itaú - operacional" e "Itaú - reserva").
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Conta possui lançamentos vinculados; inative ao invés de excluir"'>
+Comportamento esperado. Excluir apagaria o histórico financeiro; inative a conta.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="Não consigo trocar o banco ou a integração da conta">
+Existe cobrança em aberto (emitindo ou emitida) nessa conta. O boleto está vivo no banco emissor, e
+trocar o vínculo faria o cancelamento e a baixa saírem pelo banco errado. Liquide ou cancele as
+cobranças em aberto e tente de novo.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Como definir a conta padrão', href: '/docs/financeiro/conta-padrao' },
+    { title: 'Cobranças (boleto e PIX)', href: '/docs/financeiro/cobrancas' },
+    { title: 'Conciliação de pagamentos', href: '/docs/financeiro/conciliacao' },
+  ]}
+/>

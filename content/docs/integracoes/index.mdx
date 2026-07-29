@@ -1,0 +1,59 @@
+---
+title: Visão geral das integrações
+description: As contas de serviços externos que o Mainstay usa para enviar, cobrar e pagar.
+keywords:
+  - integração
+  - conector
+  - conta
+  - automação
+  - logs
+---
+
+As integrações conectam o Mainstay a serviços externos. Elas não são um módulo à parte do trabalho:
+são o que faz o envio de proposta, a emissão de cobrança e o repasse via PIX realmente saírem.
+
+## Onde as integrações aparecem no dia a dia
+
+| Fluxo | Depende de |
+| --- | --- |
+| [Enviar proposta](/docs/comercial/enviar-proposta) | Conta de e-mail ou WhatsApp |
+| [Régua de cobrança](/docs/financeiro/regua-de-cobranca) | Conta de e-mail ou WhatsApp |
+| [Emitir boleto e PIX](/docs/financeiro/cobrancas) | Conta bancária de cobrança, vinculada à conta financeira |
+| [Repasse via PIX](/docs/financeiro/repasse-influenciador) | Conta bancária de pagamentos, vinculada à conta financeira |
+| [Assinatura de contrato](/docs/producao/documentos-e-contratos) | Conta de assinatura digital |
+
+## As telas
+
+<Cards>
+  <Card
+    title="Contas conectadas"
+    href="/docs/integracoes/contas"
+    description="As contas de serviços externos e seu status."
+  />
+  <Card
+    title="Ações disponíveis"
+    href="/docs/integracoes/acoes"
+    description="Quais ações de negócio estão ligadas a qual conta."
+  />
+  <Card
+    title="Automações"
+    href="/docs/integracoes/automacoes"
+    description="Regras do tipo 'quando acontecer X, faça Y'."
+  />
+  <Card
+    title="Logs de integração"
+    href="/docs/integracoes/logs"
+    description="O histórico de execuções, para investigar falhas."
+  />
+  <Card
+    title="Redes sociais"
+    href="/docs/integracoes/redes-sociais"
+    description="As plataformas usadas nas entregas e nas métricas."
+  />
+</Cards>
+
+<Callout title="Vocabulário">
+  Nas telas o termo é **Conta** (Conta de Integração). "Conector" é o nome técnico interno do mesmo
+  conceito e pode aparecer em mensagens de erro mais antigas.
+
+</Callout>

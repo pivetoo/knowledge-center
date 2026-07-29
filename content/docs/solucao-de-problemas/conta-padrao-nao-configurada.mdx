@@ -1,0 +1,87 @@
+---
+title: Conta padrão não configurada
+description: O que fazer quando falta conta financeira ativa para converter propostas ou lançar valores.
+keywords:
+  - conta padrão
+  - conta financeira
+  - conversão
+  - não configurada
+  - erro
+---
+
+Vários fluxos do Mainstay dependem de existir pelo menos uma conta financeira ativa. Sem ela, a
+conversão da proposta em campanha é bloqueada.
+
+## O sintoma mais comum
+
+<ProblemaComum titulo='"Nenhuma conta financeira ativa configurada. Cadastre uma conta antes de converter a proposta."'>
+A conversão gera o recebível da marca e precisa de uma conta para lançá-lo. Sem conta ativa, a
+operação inteira é bloqueada — em vez de criar a campanha sem o financeiro correspondente.
+
+</ProblemaComum>
+
+## Como resolver
+
+<Steps>
+
+<Step>
+### Cadastre a conta
+
+**Financeiro › Contas bancárias › Nova conta**. Informe nome, tipo e, quando houver, banco, agência e
+conta. Uma conta de caixa pode ficar sem banco.
+
+</Step>
+
+<Step>
+### Confirme que está ativa
+
+Contas inativas não contam. Use o filtro **Incluir inativas** para conferir se a conta já existia
+inativa.
+
+</Step>
+
+<Step>
+### Defina como padrão
+
+Selecione a conta e clique em **Definir como padrão**. Ela passa a ser sugerida nos lançamentos.
+
+</Step>
+
+<Step>
+### Refaça a conversão
+
+</Step>
+
+</Steps>
+
+<Resultado>
+A conversão passa a funcionar e o recebível da marca é criado na conta escolhida.
+
+</Resultado>
+
+## Problemas relacionados
+
+<ProblemaComum titulo='"Não é possível definir uma conta inativa como padrão"'>
+Reative a conta em **Editar conta** e então defina como padrão.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="Não consigo emitir boleto mesmo com conta cadastrada">
+Ter conta não basta para cobrar: a conta precisa ter uma integração de **Cobrança** vinculada. Veja
+[cobranças](/docs/financeiro/cobrancas).
+
+</ProblemaComum>
+
+<ProblemaComum titulo="Não consigo trocar o banco da conta">
+Existe cobrança em aberto nessa conta. O vínculo bancário fica congelado enquanto houver boleto vivo
+no banco emissor. Liquide ou cancele as cobranças em aberto primeiro.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Como criar uma conta financeira', href: '/docs/financeiro/contas-financeiras' },
+    { title: 'Como definir a conta padrão', href: '/docs/financeiro/conta-padrao' },
+    { title: 'Como converter uma proposta em campanha', href: '/docs/comercial/converter-em-campanha' },
+  ]}
+/>

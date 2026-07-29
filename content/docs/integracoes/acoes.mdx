@@ -1,0 +1,64 @@
+---
+title: Ações disponíveis
+description: As operações que cada integração expõe para uso nas automações e nos fluxos do sistema.
+keywords:
+  - ações
+  - capacidades
+  - operações
+  - integração
+  - automação
+---
+
+**Integrações › Ações** lista as operações que as integrações expõem para uso nas automações e nos
+fluxos do sistema.
+
+<Permissoes>
+Área **Integration capabilities** — consulta das ações de negócio disponíveis.
+
+</Permissoes>
+
+## Para que serve
+
+Cada ação é uma operação de negócio: enviar e-mail, enviar WhatsApp, emitir cobrança, executar PIX,
+enviar documento para assinatura. A tela mostra quais estão disponíveis e a qual conta cada uma está
+associada.
+
+É a resposta rápida para a pergunta "por que o envio de proposta por WhatsApp não aparece?" — se a
+ação não estiver na lista com uma conta associada, o fluxo que depende dela não tem por onde sair.
+
+## Como usar no diagnóstico
+
+<Steps>
+
+<Step>
+Identifique a ação relacionada ao fluxo que não está funcionando.
+
+</Step>
+
+<Step>
+Confira se ela tem uma conta associada e se a conta está ativa em
+[Contas conectadas](/docs/integracoes/contas).
+
+</Step>
+
+<Step>
+Se a conta existir e ainda assim falhar, confira o motivo em
+[Logs de integração](/docs/integracoes/logs).
+
+</Step>
+
+</Steps>
+
+<Callout type="warn" title='"Ação de negócio desconhecida"'>
+  Essa mensagem aparece quando um fluxo tenta usar uma ação que não está disponível para a agência.
+  Confirme se a integração correspondente está habilitada e com conta conectada.
+
+</Callout>
+
+<Relacionados
+  links={[
+    { title: 'Contas conectadas', href: '/docs/integracoes/contas' },
+    { title: 'Automações', href: '/docs/integracoes/automacoes' },
+    { title: 'Logs de integração', href: '/docs/integracoes/logs' },
+  ]}
+/>

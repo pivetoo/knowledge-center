@@ -1,0 +1,122 @@
+---
+title: Como criar um entregável
+description: Cadastre uma entrega da campanha com plataforma, prazo, valores e influenciador.
+keywords:
+  - entrega
+  - entregável
+  - criar
+  - prazo
+  - plataforma
+  - repasse
+---
+
+O entregável é cada peça de conteúdo combinada: um Reels, um story, um vídeo. É a unidade que passa
+por revisão, aprovação e publicação — e a que gera o custo do influenciador no Financeiro.
+
+<Permissoes>
+Área **Campaign deliverables** — "Permite cadastrar uma nova entrega de campanha".
+
+</Permissoes>
+
+<PreRequisitos>
+A campanha precisa existir e ter pelo menos um influenciador no casting.
+
+</PreRequisitos>
+
+## Passo a passo
+
+<Steps>
+
+<Step>
+### Abra a aba Entregas
+
+**Produção › Campanhas › Detalhes**, aba **Entregas**, botão **Nova entrega**.
+
+</Step>
+
+<Step>
+### Vincule o influenciador
+
+Selecione o **Influenciador da campanha** — a lista traz apenas quem está no casting.
+
+</Step>
+
+<Step>
+### Descreva a peça
+
+**Título**, **Tipo de entrega** e **Plataforma**. Tipos de entrega e plataformas são cadastros
+configuráveis.
+
+</Step>
+
+<Step>
+### Defina o prazo
+
+O campo **Prazo** alimenta o calendário, o SLA de entregas e os lembretes automáticos.
+
+</Step>
+
+<Step>
+### Informe os valores
+
+| Campo | O que é |
+| --- | --- |
+| **Valor bruto** | O valor total da entrega |
+| **Repasse influenciador** | Quanto vai para o influenciador |
+| **Fee agência** | Quanto fica com a agência |
+
+A soma do repasse com o fee não pode passar do valor bruto.
+
+</Step>
+
+<Step>
+### Salve
+
+</Step>
+
+</Steps>
+
+<Resultado>
+A entrega aparece na aba **Entregas** com status **Pendente**. Se a campanha estava em **Rascunho**
+ou **Planejada**, ela passa automaticamente para **Em execução**.
+
+</Resultado>
+
+## Ciclo de status da entrega
+
+| Status | Significado |
+| --- | --- |
+| Pendente | Cadastrada, produção não começou |
+| Em revisão | Há uma versão de conteúdo em avaliação |
+| Aprovada | Liberada para publicar |
+| Publicada | No ar, com URL registrada |
+| Cancelada | Descartada |
+
+O status caminha sozinho conforme o conteúdo avança: aprovar o conteúdo promove a entrega para
+**Aprovada**, sem seleção manual.
+
+## Lembretes de prazo
+
+O sistema notifica as entregas não publicadas com prazo vencido ou próximo do vencimento. O lembrete
+é reenviado se o prazo for remarcado.
+
+## Problemas comuns
+
+<ProblemaComum titulo='"Repasse + fee não pode exceder o valor bruto"'>
+Revise os três valores. O valor bruto é o teto: repasse + fee precisam caber dentro dele.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="A lista de influenciadores está vazia">
+Nenhum influenciador foi adicionado ao casting. Veja
+[influenciadores na campanha](/docs/producao/influenciadores-na-campanha).
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Enviar conteúdo para aprovação', href: '/docs/producao/enviar-conteudo-para-aprovacao' },
+    { title: 'Como publicar um entregável', href: '/docs/producao/publicar-entregavel' },
+    { title: 'Calendário de entregas', href: '/docs/producao/calendario' },
+  ]}
+/>

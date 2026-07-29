@@ -1,0 +1,108 @@
+---
+title: Como converter uma proposta em campanha
+description: Transforme uma proposta aprovada em campanha, com casting e recebível da marca.
+keywords:
+  - converter
+  - campanha
+  - conversão
+  - recebível
+  - casting
+  - proposta aprovada
+---
+
+A conversão é a ponte entre Comercial e Produção. Em uma única operação ela cria a campanha, traz os
+influenciadores dos itens da proposta e gera o recebível da marca no Financeiro.
+
+<Permissoes>
+Área **Proposals** — "Permite converter uma proposta em campanha".
+
+</Permissoes>
+
+<PreRequisitos>
+A proposta precisa estar **Aprovada** e a agência precisa ter **ao menos uma conta financeira ativa**
+— é nela que o recebível será lançado.
+
+</PreRequisitos>
+
+## Passo a passo
+
+<Steps>
+
+<Step>
+### Abra a proposta aprovada
+
+**Comercial › Propostas › Detalhes**. A seção **Conversão em campanha** aparece com o botão
+**Converter**.
+
+</Step>
+
+<Step>
+### Escolha o destino
+
+<Tabs items={['Criar nova campanha', 'Vincular a campanha existente']}>
+
+<Tab value="Criar nova campanha">
+Use **Criar nova campanha**. A campanha herda a marca, o nome e o valor da proposta. Antes de
+confirmar, revise **Nome da campanha**, **Data de início** e **Data de fim**.
+
+</Tab>
+
+<Tab value="Vincular a campanha existente">
+Selecione uma campanha já cadastrada. Os itens da proposta passam a ser referenciados por ela.
+
+</Tab>
+
+</Tabs>
+
+</Step>
+
+<Step>
+### Confirme
+
+</Step>
+
+</Steps>
+
+<Resultado>
+A campanha existe, os influenciadores dos itens já estão no casting com seus valores acordados, e o
+recebível da marca aparece em **Financeiro › Contas a receber**. A proposta passa para
+**Convertida**.
+
+</Resultado>
+
+## O que a conversão faz por baixo
+
+- **Tudo ou nada.** Campanha, influenciadores e recebível são gravados juntos. Se qualquer parte
+  falhar, nada é gravado pela metade.
+- **Rateio do desconto.** Havendo desconto, ele é distribuído entre os influenciadores na proporção
+  da participação de cada um no valor bruto, para a soma dos valores acordados fechar com o orçamento
+  da campanha.
+- **Custo previsto, não repasse.** A conversão **não** cria os repasses aos influenciadores. Até a
+  publicação da entrega, a campanha mostra apenas o custo previsto a partir do que foi acordado. O
+  repasse nasce na [publicação da entrega](/docs/producao/publicar-entregavel), com o valor real.
+
+## Problemas comuns
+
+<ProblemaComum titulo='"A proposta precisa estar aprovada para ser convertida em campanha"'>
+Registre a decisão antes: aprove a proposta manualmente ou aguarde o aceite pelo link público.
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Nenhuma conta financeira ativa configurada"'>
+Sem conta ativa não há onde lançar o recebível. Cadastre uma em **Financeiro › Contas bancárias**.
+Veja [conta padrão não configurada](/docs/solucao-de-problemas/conta-padrao-nao-configurada).
+
+</ProblemaComum>
+
+<ProblemaComum titulo='"Esta proposta já foi convertida em campanha"'>
+A conversão acontece uma vez só. Abra a campanha existente pelo vínculo mostrado na proposta.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Como criar uma campanha', href: '/docs/producao/criar-campanha' },
+    { title: 'Influenciadores na campanha', href: '/docs/producao/influenciadores-na-campanha' },
+    { title: 'Contas a receber', href: '/docs/financeiro/contas-a-receber' },
+  ]}
+/>

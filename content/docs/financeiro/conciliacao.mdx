@@ -1,0 +1,106 @@
+---
+title: Conciliação de pagamentos
+description: Deixe o sistema baixar sozinho os recebíveis cujas cobranças foram liquidadas no banco.
+keywords:
+  - conciliação
+  - conciliação bancária
+  - liquidação
+  - baixa automática
+  - extrato
+  - boleto pago
+---
+
+Conciliar é casar o que aconteceu no banco com o que está registrado no Mainstay. Nesta versão, isso
+acontece de forma **automática, a partir das cobranças emitidas** pelo próprio sistema.
+
+<Callout type="warn" title="Não existe importação manual de extrato">
+  O Mainstay **não** tem hoje uma tela de conciliação bancária com importação de extrato e casamento
+  manual de transações. A conciliação disponível é a automática descrita abaixo, restrita a
+  recebíveis com cobrança emitida pelo sistema. Movimentações que não passaram por uma cobrança do
+  Mainstay precisam ser baixadas manualmente em
+  [registrar um pagamento](/docs/financeiro/registrar-pagamento).
+
+</Callout>
+
+## Como funciona a conciliação automática
+
+<Permissoes>
+Área **Financial accounts** — vínculo de integrações e ajuste da conta.
+
+</Permissoes>
+
+<PreRequisitos>
+A conta precisa ter uma integração de **Cobrança** vinculada. Só recebíveis com cobrança emitida pelo
+Mainstay são conciliados.
+
+</PreRequisitos>
+
+<Steps>
+
+<Step>
+### Abra as integrações da conta
+
+**Financeiro › Contas bancárias**, selecione a conta e clique em **Integrações**.
+
+</Step>
+
+<Step>
+### Ligue a consulta de pagamentos
+
+Ative a opção **Consultar pagamentos**. Ela consulta os boletos liquidados dessa conta de tempos em
+tempos e dá baixa nos recebíveis pagos.
+
+</Step>
+
+</Steps>
+
+<Resultado>
+Recebíveis com cobrança liquidada passam para **Pago** sozinhos, sem baixa manual. A operação é
+idempotente: reprocessar a mesma liquidação não gera baixa em duplicidade.
+
+</Resultado>
+
+## O que o sistema usa para casar
+
+A correlação é feita pelo identificador que o Mainstay envia ao banco na emissão da cobrança. Por
+isso a conciliação só alcança cobranças emitidas pelo próprio sistema — um depósito avulso ou uma
+transferência recebida por fora não tem esse identificador.
+
+## Acompanhamento
+
+- Em **Financeiro › Contas bancárias**, as colunas **Última sincronização** e **Saldo bancário**
+  mostram quando a conta foi sincronizada pela última vez. Contas nunca sincronizadas aparecem como
+  não sincronizadas.
+- O indicador **Sincronizadas** no topo da tela mostra quantas contas estão em dia.
+- Falhas de comunicação ficam registradas em **Integrações › Logs**.
+
+## Movimentações que não conciliam sozinhas
+
+| Situação | O que fazer |
+| --- | --- |
+| Pagamento por transferência sem boleto | [Registrar o pagamento](/docs/financeiro/registrar-pagamento) manualmente |
+| Cobrança emitida fora do Mainstay | Registrar o pagamento manualmente |
+| Recebimento parcial | Registrar o valor recebido; o saldo continua aberto |
+| Pagamento a fornecedor | Registrar o pagamento manualmente |
+
+## Problemas comuns
+
+<ProblemaComum titulo="A opção Consultar pagamentos está desabilitada">
+A conta não tem integração de **Cobrança** vinculada. Vincule-a primeiro — sem ela não há de quem
+consultar os liquidados.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="O cliente pagou e o recebível continua em aberto">
+Confira se a cobrança foi emitida pelo Mainstay (status **Emitida**) e se a consulta de pagamentos
+está ligada na conta. Se o pagamento foi feito por outro caminho, faça a baixa manual.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Cobranças (boleto e PIX)', href: '/docs/financeiro/cobrancas' },
+    { title: 'Como registrar um pagamento', href: '/docs/financeiro/registrar-pagamento' },
+    { title: 'Erro de conciliação', href: '/docs/solucao-de-problemas/erro-de-conciliacao' },
+  ]}
+/>

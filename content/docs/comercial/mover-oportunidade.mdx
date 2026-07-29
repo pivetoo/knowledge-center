@@ -1,0 +1,114 @@
+---
+title: Como movimentar uma oportunidade no funil
+description: Mude o estágio de uma oportunidade pelo quadro ou pelo detalhe e entenda o que muda junto.
+keywords:
+  - mover
+  - estágio
+  - arrastar
+  - avançar
+  - funil
+  - mudança de estágio
+---
+
+Mover a oportunidade de estágio é como você registra o avanço da negociação. A mudança recalcula a
+probabilidade, entra no histórico e pode disparar automações.
+
+<Permissoes>
+Área **Opportunities** — "Permite alterar o estágio de uma oportunidade comercial".
+
+</Permissoes>
+
+<Captura id="comercial-funil" />
+
+## Passo a passo
+
+<Tabs items={['Pelo quadro', 'Pelo detalhe']}>
+
+<Tab value="Pelo quadro">
+
+<Steps>
+
+<Step>
+Abra **Comercial › Funil**.
+
+</Step>
+
+<Step>
+Arraste o cartão para a coluna do novo estágio. No celular, use a ação **Mover para...** dentro do
+cartão.
+
+</Step>
+
+<Step>
+Se o destino for um estágio final, confirme o encerramento na janela que abre. Veja
+[como fechar uma oportunidade](/docs/comercial/fechar-oportunidade).
+
+</Step>
+
+</Steps>
+
+</Tab>
+
+<Tab value="Pelo detalhe">
+
+<Steps>
+
+<Step>
+Abra a oportunidade (clique no cartão e use **Detalhes**).
+
+</Step>
+
+<Step>
+Na aba **Resumo**, use o botão **Avançar para [próximo estágio]**.
+
+</Step>
+
+</Steps>
+
+</Tab>
+
+</Tabs>
+
+<Resultado>
+O cartão passa para a nova coluna, a probabilidade é recalculada e a mudança fica registrada no
+histórico de estágios da oportunidade.
+
+</Resultado>
+
+## O que acontece junto
+
+- **Probabilidade.** Se estiver em automático, assume a média do novo estágio. Se estiver travada em
+  manual, permanece como está.
+- **Histórico.** Toda mudança de estágio fica registrada, com data e autor.
+- **Automações.** A mudança de estágio é um gatilho disponível nas Automações — dá para conectá-la a
+  ações externas.
+
+<Callout title="Funil não precisa ser linear">
+  Recuar uma oportunidade é permitido. Os relatórios consideram o histórico completo, não apenas o
+  estágio atual, então uma oportunidade que avançou e voltou continua contando como avançada nas
+  análises.
+
+</Callout>
+
+## Problemas comuns
+
+<ProblemaComum titulo='"A oportunidade foi alterada por outra pessoa"'>
+Outra pessoa mexeu no mesmo cartão enquanto você arrastava. O quadro se atualiza sozinho; confira o
+estágio atual e mova novamente se ainda fizer sentido.
+
+</ProblemaComum>
+
+<ProblemaComum titulo="Não consigo mover para o estágio de ganha ou perdida">
+Esses estágios abrem uma confirmação obrigatória. Na perda, o motivo é exigido. Se a janela não
+aparecer, verifique se existe um estágio final ativo configurado em **Configuração › Funil
+comercial**.
+
+</ProblemaComum>
+
+<Relacionados
+  links={[
+    { title: 'Como fechar uma oportunidade', href: '/docs/comercial/fechar-oportunidade' },
+    { title: 'O funil comercial', href: '/docs/comercial/funil' },
+    { title: 'Configurações do Comercial', href: '/docs/comercial/configuracoes' },
+  ]}
+/>
