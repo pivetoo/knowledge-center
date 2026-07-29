@@ -1,0 +1,101 @@
+name: Deploy Central de Ajuda
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: knowledge-center-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_OWNER: pivetoo
+  IMAGE: knowledge-center
+  SITE_URL: https://ajuda.mainstay.com.br
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      # Tambem valida que todo <Captura id="..."> tem imagem correspondente.
+      - name: Tipos e capturas
+        run: npm run types:check
+
+  build:
+    needs: verificar
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: Dockerfile
+          push: true
+          build-args: |
+            NEXT_PUBLIC_SITE_URL=${{ env.SITE_URL }}
+          tags: |
+            ${{ env.REGISTRY }}/${{ env.IMAGE_OWNER }}/${{ env.IMAGE }}:latest
+            ${{ env.REGISTRY }}/${{ env.IMAGE_OWNER }}/${{ env.IMAGE }}:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # A borda de rede da Hostinger dropa intermitentemente os IPs dos runners do GitHub em
+      # QUALQUER porta (22 e 443). Por isso o deploy NAO depende de conexao de entrada: o VPS puxa
+      # a imagem sozinho pelo timer de poll (knowledge-center-deploy-poll.timer, a cada 30s).
+      # Este passo so AVISA o webhook para deploy instantaneo quando o IP nao esta bloqueado;
+      # e best-effort e nunca falha o run.
+      - name: Avisar o VPS (best-effort; o VPS tambem faz poll a cada 30s)
+        continue-on-error: true
+        run: |
+          if curl -fsS --connect-timeout 15 --max-time 180 -X POST \
+              -H "X-Deploy-Token: ${{ secrets.DEPLOY_HOOK_TOKEN }}" \
+              --data-binary @deploy/docker-compose.prod.yml \
+              ${{ env.SITE_URL }}/deploy-hook; then
+            echo "Deploy acionado via webhook (instantaneo)."
+          else
+            echo "Webhook inacessivel (IP do runner bloqueado na borda). O poll do VPS aplica em ate ~30s."
+          fi

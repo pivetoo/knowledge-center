@@ -1,0 +1,7 @@
+services:
+  web:
+    image: ghcr.io/pivetoo/knowledge-center:latest
+    container_name: knowledge-center
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8114:3000"

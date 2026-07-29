@@ -1,0 +1,11 @@
+.git
+.github
+node_modules
+.next
+.source
+.env
+.env.*
+!.env.example
+!.env.capture.example
+.playwright-mcp
+*.log

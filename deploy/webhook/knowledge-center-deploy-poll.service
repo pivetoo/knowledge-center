@@ -1,0 +1,8 @@
+[Unit]
+Description=Central de Ajuda deploy poll (pull latest image and apply)
+After=network-online.target docker.service
+Wants=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/knowledge-center-deploy/deploy.sh
